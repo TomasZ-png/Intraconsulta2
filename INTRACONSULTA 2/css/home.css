@@ -6,21 +6,21 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f1f5f9;
-    color: #333;
+    background: #272020;
+    color: #e4e4e4;
 }
 
 .container {
-    max-width: 1200px;
+
     margin: 0 auto;
-    background: white;
+    background: #272020;
     min-height: 100vh;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 /* Header */
 .header {
-    background: #1e3a8a;
+    background: #121215;
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -44,9 +44,10 @@ body {
     font-weight: 600;
 }
 
+
 /* Navigation */
 .navbar {
-    background: #3b82f6;
+    background: #48a65c;
     padding: 0;
 }
 
@@ -149,7 +150,7 @@ body {
 .section-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1e3a8a;
+    color: #efefef;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #e5e7eb;
@@ -162,7 +163,7 @@ body {
 }
 
 .operation-card {
-    background: white;
+    background: #565353;
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -186,7 +187,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    color: white;
+    color: #efefef;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -194,12 +195,12 @@ body {
 .operation-title {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #1e3a8a;
+    color: #efefef;
     margin-bottom: 0.5rem;
 }
 
 .operation-description {
-    color: #64748b;
+    color: #efefef;
     font-size: 0.9rem;
     line-height: 1.5;
 }
