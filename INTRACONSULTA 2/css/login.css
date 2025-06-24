@@ -1,59 +1,51 @@
 /* General */
-body {
+* {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f9f9f9;
-    color: #222;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header */
-.top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #003c1e;
-    color: white;
-    padding: 1rem 2rem;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1e1e1e;
+    color: #e4e4e4;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.user span {
-    background-color: #4caf50;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-weight: bold;
-}
 
 /* Hero section */
 .hero {
     display: flex;
-    justify-content: center;         /* Centra ambos bloques horizontalmente */
+    justify-content: right;
     align-items: center;             /* Alinea verticalmente el contenido */
-    gap: 6rem;                       /* Espacio generoso entre bienvenida y formulario */
+    /*gap: 30rem;                       !* Espacio generoso entre bienvenida y formulario *!*/
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #36a37e, #3ec99b);
+    /*background: linear-gradient(135deg, #36a37e, #3ec99b);*/
     color: white;
-    flex-wrap: wrap;                 /* Permite que se ajuste en pantallas más estrechas */
+    flex-wrap: wrap;
+    width: 100%;
+    background-image: url("../images/Fachada-Entrada-Interior-Dia02.jpg");
+    /* Permite que se ajuste en pantallas más estrechas */
 }
-
-.hero-right {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+.hero-left {
+    background: rgba(12, 144, 114, 0.3);
+    backdrop-filter: blur(5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     padding: 2.5rem;
     border-radius: 12px;
     width: 100%;
     max-width: 360px;
     color: white;
+}
+.hero-right {
+    background: rgba(0, 77, 64, 0.3);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    color: white;
+    margin-right: 2rem;
 }
 
 .hero-right h2 {
@@ -147,12 +139,22 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 2rem;
-    background-color: white;
+    background: #303030;
 }
-
+#card-sied{
+    display: flex;
+    /*justify-content: center;*/
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-right: 1rem ;
+    padding-left: 1rem ;
+    background-color: #00876c;
+    border-radius: 6px;
+}
 .card {
     width: 30%;
-    background-color: #f4f4f4;
+    background: #1e1e1e;
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
@@ -173,7 +175,7 @@ body {
 
 /* FAQ */
 .faq {
-    background-color: #f9f9f9;
+    background: #1e1e1e;
     padding: 2rem;
 }
 
