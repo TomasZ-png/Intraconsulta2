@@ -31,11 +31,35 @@
   <ul class="nav-menu">
     <li class="nav-item"><a href="./materiasEnCurso.html" class="nav-link">Materias</a></li>
     <li class="nav-item"><a href="#" class="nav-link">Inscripciones</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Otras operaciones</a></li>
+    <li class="nav-item"><a href="#" class="nav-link" id="otrasOperacionesBtn">Otras operaciones</a></li>
     <li class="nav-item"><a href="#" class="nav-link">Tramites</a></li>
     <li class="nav-item"><a href="#" class="nav-link">Plan de estudios</a></li>
   </ul>
 </nav>
+
+<!-- Mega menú desplegable -->
+<div id="megaMenuOverlay" class="mega-menu-overlay" style="display:none;"></div>
+<div id="megaMenu" class="mega-menu" style="display:none;">
+  <button class="mega-menu-close" id="closeMegaMenu">×</button>
+  <div class="mega-menu-content">
+    <div class="mega-menu-col">
+      <h3>Solicitudes</h3>
+      <a href="solicitudes.html" class="mega-menu-link">Solicitudes</a>
+    </div>
+    <div class="mega-menu-col">
+      <h3>Constancias</h3>
+      <a href="constancias.html" class="mega-menu-link">Constancias</a>
+    </div>
+    <div class="mega-menu-col">
+      <h3>Certificados</h3>
+      <a href="certificados.html" class="mega-menu-link">Certificados</a>
+    </div>
+    <div class="mega-menu-col">
+      <h3>Otras operaciones</h3>
+      <a href="otrasOperaciones.html" class="mega-menu-link">Otras operaciones</a>
+    </div>
+  </div>
+</div>
 
 <!-- Contenedor principal -->
 <div class="container">
@@ -45,7 +69,7 @@
     <ul class="menu">
       <li class="active">Materias en curso</li>
       <li>Materias regularizadas</li>
-      <li>Historial académico</li>
+      <a href="./historialAcademico.html" style="text-decoration: none;"><li>Historial académico</li></a>
     </ul>
   </aside>
 
@@ -95,5 +119,6 @@
     </div>
   </main>
 </div>
+<script src="../js/megaMenu.js"></script>
 </body>
 </html>

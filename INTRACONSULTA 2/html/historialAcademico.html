@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intraconsulta - Historial Académico</title>
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/materiasEnCurso.css">
+   
+</head>
+<body>
+<header class="header">
+  <div class="logo">
+    <a href="home.html" class="logo-link">
+      <img src="../images/unlam-logo.png" alt="logo">
+      <span>Intraconsulta</span>
+    </a>
+  </div>
+  <div class="user-info">
+    
+    <a href="#" class="user-link user-name">
+      DE SAN MARTIN, JUAN JOSÉ
+      <img src="../images/user.png"  alt="Foto de perfil" class="profile-pic">
+    </a>
+  </div>
+</header>
+
+<nav class="navbar">
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="./materiasEnCurso.html" class="nav-link">Materias</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Inscripciones</a></li>
+    <li class="nav-item"><a href="#" class="nav-link" id="otrasOperacionesBtn">Otras operaciones</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Tramites</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Plan de estudios</a></li>
+  </ul>
+</nav>
+
+<!-- Mega menú desplegable -->
+<div id="megaMenuOverlay" class="mega-menu-overlay" style="display:none;"></div>
+<div id="megaMenu" class="mega-menu" style="display:none;">
+  <button class="mega-menu-close" id="closeMegaMenu">×</button>
+  <div class="mega-menu-content">
+    <div class="mega-menu-col">
+      <h3>Solicitudes</h3>
+      <a href="solicitudes.html" class="mega-menu-link">Solicitudes</a>
+    </div>
+    <div class="mega-menu-col">
+      <h3>Constancias</h3>
+      <a href="constancias.html" class="mega-menu-link">Constancias</a>
+    </div>
+    <div class="mega-menu-col">
+      <h3>Certificados</h3>
+      <a href="certificados.html" class="mega-menu-link">Certificados</a>
+    </div>
+    <div class="mega-menu-col">
+      <h3>Otras operaciones</h3>
+      <a href="otrasOperaciones.html" class="mega-menu-link">Otras operaciones</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <aside class="sidebar">
+    <h3>Mi matrícula</h3>
+    <ul class="menu">
+      <a href="./materiasEnCurso.html" style="text-decoration: none;"><li>Materias en curso</li></a>
+      <li>Materias regularizadas</li>
+      <a href="./historialAcademico.html" style="text-decoration: none;"> <li class="active">Historial académico</li></a>
+    </ul>
+  </aside>
+
+  <main class="contenido">
+    <nav class="breadcrumb">
+      <span>Mi matrícula</span> &gt; <span>Historial académico</span>
+    </nav>
+    <h2>Materias promocionadas</h2>
+    <div class="filtros-historial">
+      <label for="plan-estudio">Seleccione el plan de estudio</label>
+      <select id="plan-estudio">
+        <option>(298)Plan09-3º TEC. UNIVERSITARIA EN WEB - DTO. INGENIERIA</option>
+      </select>
+      <button class="btn-consultar">Consultar</button>
+    </div>
+    <table class="tabla-materias">
+      <thead>
+      <tr>
+        <th>Código</th>
+        <th>Materia</th>
+        <th>Fecha</th>
+        <th>Nota</th>
+        <th>Acta</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>02620</td>
+        <td>INFORMATICA GENERAL</td>
+        <td>2024-07-13</td>
+        <td>7</td>
+        <td>426149</td>
+      </tr>
+      <tr>
+        <td>02622</td>
+        <td>INGLES TECNICO I</td>
+        <td>2024-07-13</td>
+        <td>7</td>
+        <td>426150</td>
+      </tr>
+      <tr>
+        <td>02621</td>
+        <td>MATEMATICA GENERAL</td>
+        <td>2024-07-13</td>
+        <td>7</td>
+        <td>426151</td>
+      </tr>
+      <tr>
+        <td>02628</td>
+        <td>PROGRAMACION BASICA I</td>
+        <td>2024-07-13</td>
+        <td>7</td>
+        <td>426131</td>
+      </tr>
+      <tr>
+        <td>02627</td>
+        <td>INGLES TECNICO II</td>
+        <td>2024-11-30</td>
+        <td>7</td>
+        <td>426147</td>
+      </tr>
+      <tr>
+        <td>02618</td>
+        <td>INTRODUCCION AL DISEÑO GRAFICO EN LA WEB</td>
+        <td>2024-11-30</td>
+        <td>8</td>
+        <td>434483</td>
+      </tr>
+      <tr>
+        <td>02624</td>
+        <td>PROGRAMACION WEB I</td>
+        <td>2024-11-30</td>
+        <td>9</td>
+        <td>434484</td>
+      </tr>
+      <tr>
+        <td>02625</td>
+        <td>BASE DE DATOS I</td>
+        <td>2024-11-30</td>
+        <td>7</td>
+        <td>434481</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="historial-footer">
+      <span>Cantidad de materias promocionadas: 8</span>
+      <button class="btn-finales">Finales desaprobados</button>
+    </div>
+  </main>
+</div>
+
+<script src="../js/megaMenu.js"></script>
+</body>
+</html> 

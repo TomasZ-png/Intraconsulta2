@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intraconsulta - Dashboard</title>
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/materiasEnCurso.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">
+    <a href="home.html" class="logo-link">
+      <img src="../images/unlam-logo.png" alt="logo">
+      <span>Intraconsulta</span>
+    </a>
+  </div>
+  <div class="user-info">
+    <a href="#" class="user-link">Calendario academico</a>
+    <a href="#" class="user-link">Mapa de aulas</a>
+    <a href="#" class="user-link">PORTAL 365</a>
+    <a href="#" class="user-link user-name">
+      RODRIGUEZ, PEDRO ROMAN
+     
+    </a>
+  </div>
+</header>
+
+<nav class="navbar">
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="./materiasEnCurso.html" class="nav-link">Materias</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Inscripciones</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Otras operaciones</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Tramites</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Plan de estudios</a></li>
+  </ul>
+</nav>
+
+<!-- Contenedor principal -->
+<div class="container">
+  <!-- Menú lateral -->
+  <aside class="sidebar">
+    <h3>Mi matrícula</h3>
+    <ul class="menu">
+      <li class="active">Materias en curso</li>
+      <li>Materias regularizadas</li>
+      <li>Historial académico</li>
+    </ul>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="contenido">
+    <h2>Materias que estoy cursando</h2>
+    <table class="tabla-materias">
+      <thead>
+      <tr>
+        <th>Código</th>
+        <th>Materia</th>
+        <th>Comisión</th>
+        <th>Horario</th>
+        <th>Aula</th>
+        <th>Modalidad</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>02630</td>
+        <td>VISUALIZACION E INTERFACES</td>
+        <td>01-2300</td>
+        <td>Martes 08:00 a 12:00</td>
+        <td>Aula 109</td>
+        <td>Semipresencial</td>
+      </tr>
+      <tr>
+        <td>02629</td>
+        <td>DISEÑO DE APLICACIONES WEB</td>
+        <td>01-3966</td>
+        <td>Miércoles 19:00 a 23:00, Sábado 14:00 a 18:00</td>
+        <td>Virtual, Virtual</td>
+        <td>Sincrónica Teams</td>
+      </tr>
+      <tr>
+        <td>02631</td>
+        <td>TALLER WEB I</td>
+        <td>02-4900</td>
+        <td>Jueves 19:00 a 23:00</td>
+        <td>Aula 253</td>
+        <td>Semipresencial</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="agregar-link">
+      Agregar aula virtual teams (<a href="#">link</a>)
+    </div>
+  </main>
+</div>
+</body>
+</html>
