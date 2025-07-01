@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inscripción definitiva a materias</title>
-  <link rel="stylesheet" href="/css/home.css">
-  <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/materiasEnCurso.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="icon" type="image/png" href="../images/unlam-logo.png">
+  <link rel="stylesheet" href="../css/materiasEnCurso.css">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <style>
     .tabla-inscripcion {
@@ -138,146 +139,290 @@
       }
       .insc-titulo { font-size: 1.3rem; }
     }
+    .btn-flotante {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 9999;
+      background: #009688;
+      color: #fff;
+      border: none;
+      border-radius: 32px;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .btn-flotante:hover {
+      background: #00796b;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+    }
+    @media (max-width: 600px) {
+      .btn-flotante {
+        right: 12px;
+        left: 12px;
+        width: auto;
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-<header class="header">
-  <div class="logo">
-    <a href="home.html" class="logo-link">
-      <img id="logo-intraconsulta" src="../images/unlam-logo.png" alt="logo">
-      <span id="titulo">Intraconsulta</span>
-    </a>
-  </div>
-  <div class="user-container">
-    <div class="user-dropdown">
-      <div class="user-info">
-        <div class="user-name">DE SAN MARTIN, JUAN JOSÉ</div>
-        <div class="estate-user">Tu estado es<span class="negrita-verde">ACTIVO</span></div>
-      </div>
-      <span class="material-symbols-outlined dropdown-arrow">expand_more</span>
-      <div class="user-dropdown-content">
-        <div class="dropdown-header">
-          <div class="user-name-full">DE SAN MARTIN, JUAN JOSÉ</div>
-          <div class="user-status">Estado: <span class="negrita-verde">ACTIVO</span></div>
-        </div>
-        <a href="#" class="dropdown-item"><span class="material-symbols-outlined">person</span>Mi Perfil</a>
-        <a href="#" class="dropdown-item"><span class="material-symbols-outlined">settings</span>Configuración</a>
-        <a href="#" class="dropdown-item"><span class="material-symbols-outlined">email</span>Office 365</a>
-        <a href="#" class="dropdown-item"><span class="material-symbols-outlined">lock</span>Cambiar Contraseña</a>
-        <a href="#" class="dropdown-item"><span class="material-symbols-outlined">help</span>Ayuda y Soporte</a>
-        <a href="#" class="dropdown-item"><span class="material-symbols-outlined">description</span>Términos y Condiciones</a>
-        <a href="#" class="dropdown-item logout"><span class="material-symbols-outlined">logout</span>Cerrar Sesión</a>
-      </div>
+  <header class="header" style="height: 70px;">
+    <div class="logo">
+      <a href="home.html" class="logo-link">
+        <img id="logo-intraconsulta" src="../images/unlam-logo.png" alt="logo">
+        <span id="titulo">Intraconsulta</span>
+      </a>
     </div>
-  </div>
-</header>
-
-<nav class="navbar">
-  <ul class="nav-menu">
-    <li class="nav-item"><a href="home.html" class="nav-link"><span class="material-symbols-outlined">home</span></a></li>
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link">Inscripciones <span class="material-symbols-outlined">expand_more</span></a>
-      <div class="dropdown-content">
-        <a href="#">Inscripción a materias</a>
-        <a href="#">Inscripción a Finales</a>
-        <a href="#">Verificación de materias</a>
-        <a href="#">Verificación de finales</a>
-        <a href="#">Oferta de materias</a>
-        <a href="#">Fecha de finales</a>
-      </div>
-    </li>
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link">Solicitudes <span class="material-symbols-outlined">expand_more</span></a>
-      <div class="dropdown-content">
-        <a href="#">Titulo/Analitico de Pre/Pos/Grado</a>
-        <a href="#">Analítico Parcial</a>
-        <a href="#">Cambio/Simultaneidad de Carreras</a>
-        <a href="#">Baja Inscripcion Anual</a>
-        <a href="#">Legalizacion de programas</a>
-        <a href="#">Libreta Universitaria</a>
-        <a href="#">Homologaciones Interdepartamentales</a>
-        <a href="#">Excepcionalidad</a>
-      </div>
-    </li>
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link">Certificados <span class="material-symbols-outlined">expand_more</span></a>
-      <div class="dropdown-content">
-        <a href="#">Certificado de Alumno Regular</a>
-        <a href="#">Certificado Materias Aprobadas</a>
-        <a href="#">Competencias básicas</a>
-        <a href="#">Descargar Certificados</a>
-      </div>
-    </li>
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link">Constancias <span class="material-symbols-outlined">expand_more</span></a>
-      <div class="dropdown-content">
-        <a href="#">Constancia de Parcial</a>
-        <a href="#">Constancia de Final</a>
-        <a href="#">Constancia de Título</a>
-      </div>
-    </li>
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link">Trámites online <span class="material-symbols-outlined">expand_more</span></a>
-      <div class="dropdown-content">
-        <a href="#">Activaciones</a>
-        <a href="#">Boleto estudiantil</a>
-        <a href="#">Cambio de plan</a>
-        <a href="#">Equivalencias</a>
-        <a href="#">Extension de correlativas</a>
-        <a href="#">Reclamo de notas</a>
-        <a href="#">Reincorporación</a>
-      </div>
-    </li>
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link">Otras operaciones <span class="material-symbols-outlined">expand_more</span></a>
-      <div class="dropdown-content">
-        <a href="#">Resoluciones</a>
-        <a href="#">Ficha Médica</a>
-        <a href="#">Contacto</a>
-        <a href="#">BIDI</a>
-        <a href="#">Validacion Email Tramites</a>
-        <a href="#">Términos y Condiciones</a>
-      </div>
-    </li>
-  </ul>
-</nav>
-
-<div class="container">
-  <!-- Menú lateral -->
-  <aside class="sidebar">
-    <h3>Inscripciones</h3>
-    <ul class="menu">
-      <li class="insc-activo">Inscripción a materias</li>
-      <li>Inscripción a finales</li>
-      <li>Verificación de materias</li>
-      <li>Verificación de finales</li>
-      <li>Oferta de materias</li>
-      <li>Fecha de finales</li>
+    <div class="user-container">
+        <div class="user-dropdown">
+            <div class="user-info">
+                <div class="user-name">RODRIGUEZ, PEDRO ROMAN</div>
+                <div class="estate-user">Tu estado es<span class="negrita-verde">ACTIVO</span><span class="material-symbols-outlined dropdown-arrow""> expand_more</span></div>
+                
+            </div>
+            
+            <div class="user-dropdown-content">
+                <div class="dropdown-header">
+                    <div class="user-name-full">RODRIGUEZ, PEDRO ROMAN</div>
+                    <div class="user-status">Estado: <span class="negrita-verde">ACTIVO</span></div>
+                </div>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">person</span>
+                    Mi Perfil
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">settings</span>
+                    Configuración
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">email</span>
+                    Office 365
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">lock</span>
+                    Cambiar Contraseña
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">help</span>
+                    Ayuda y Soporte
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">description</span>
+                    Términos y Condiciones
+                </a>
+                
+                <a href="/html/login.html" class="dropdown-item logout">
+                    <span class="material-symbols-outlined">logout</span>
+                    Cerrar Sesión
+                </a>
+            </div>
+        </div>
+    </div>
+  </header>
+  <nav class="navbar">
+    <ul class="nav-menu">
+      
+      <li style="margin-left: 5px;" class="nav-item dropdown">
+        <a href="#"  class="nav-link">Materias <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="materiasEnCurso.html">Materias en Curso</a>
+          <a href="#">Materias regularizadas</a>
+          <a href="historialAcademico.html">Historial académico</a>
+          <a href="#">Plan de Estudios</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Inscripciones <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="InscripcionMaterias.html">Inscripción a materias</a>
+          <a href="#">Inscripción a Finales</a>
+          <a href="#">Verificacion de materias</a>
+          <a href="#">Verificacion de finales</a>
+          <a href="#">Oferta de materias</a>
+          <a href="#">Fecha de finales</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Solicitudes <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Titulo/Analitico de Pre/Pos/Grado</a>
+          <a href="#">Analítico Parcial</a>
+          <a href="#">Cambio/Simultaneidad de Carreras</a>
+          <a href="#">Baja Inscripcion Anual</a>
+          <a href="#">Legalizacion de programas</a>
+          <a href="#">Libreta Universitaria</a>
+          <a href="#">Homologaciones Interdepartamentales</a>
+          <a href="#">Excepcionalidad</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Certificados <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Certificado de Alumno Regular</a>
+          <a href="#">Certificado Materias Aprobadas</a>
+          <a href="#">Competencias básicas</a>
+          <a href="#">Descargar Certificados</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Constancias <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Constancia de Parcial</a>
+          <a href="#">Constancia de Final</a>
+          <a href="#">Constancia de Título</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Trámites online <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Activaciones</a>
+          <a href="#">Boleto estudiantil</a>
+          <a href="#">Cambio de plan</a>
+          <a href="#">Equivalencias</a>
+          <a href="#">Extension de correlativas</a>
+          <a href="#">Reclamo de notas</a>
+          <a href="#">Reincorporación</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Otras operaciones <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Resoluciones</a>
+          <a href="#">Ficha Médica</a>
+          <a href="#">Contacto</a>
+          <a href="#">BIDI</a>
+          <a href="#">Validacion Email Tramites</a>
+          <a href="#">Términos y Condiciones</a>
+        </div>
+      </li>
     </ul>
-  </aside>
+  </nav>
+  <div class="container">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <h3>Inscripciones</h3>
+      <ul class="menu">
+        <li class="insc-activo">Inscripción a materias</li>
+        <li>Inscripción a finales</li>
+        <li>Verificación de materias</li>
+        <li>Verificación de finales</li>
+        <li>Oferta de materias</li>
+        <li>Fecha de finales</li>
+      </ul>
+    </aside>
+
+   
+ 
+
+
 
   <!-- Contenido principal -->
   <main class="contenido">
-    <div class="insc-titulo">Inscripción a cursadas</div>
+    <div class="insc-titulo">Inscripción a materias</div>
     <div class="insc-desc">Elige las materias a inscribirte y confirma tu inscripción definitiva.</div>
-    <div class="insc-disp">¡Atención! Para poder inscribirte, primero debes aceptar los términos y condiciones.</div>
-    <div class="terminos-container">
-      <div class="terminos-header" onclick="toggleTerminos()">
-        <span class="material-symbols-outlined" id="icon-terminos">expand_more</span>
-        Términos y condiciones de la inscripción
-      </div>
-      <div class="terminos-body" id="body-terminos">
-        Al inscribirte a las materias, declarás que la información proporcionada es verídica y que cumplís con los requisitos académicos y administrativos correspondientes. Recordá que la inscripción es personal e intransferible. La Universidad podrá verificar la veracidad de los datos y tomar las medidas necesarias en caso de inconsistencias. <br><br>
-        Es tu responsabilidad revisar los horarios, comisiones y correlatividades antes de confirmar la inscripción. Ante cualquier duda, consultá con la Secretaría Académica.
-      </div>
-      <div class="terminos-check">
-        <input type="checkbox" id="check-terminos" onchange="habilitarInscripcion()">
-        <label for="check-terminos">He leído y acepto los términos y condiciones</label>
-      </div>
-    </div>
-    <form id="form-inscripcion">
+   
+    <div>
+      <h3>Pre seleccion de materias</h3>
       <table class="tabla-inscripcion">
         <thead>
+          <tr><td colspan="6" style=" background-color: #00876c;">Plan A</td></tr>
+        <tr>
+          <th>Código</th>
+          <th>Materia</th>
+          <th>Comisión/Turno/Día</th>
+          <th>Modalidad</th>
+          <th>Agregar</th>
+          <th>Condición</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+        <tr>
+          <td>2630</td>
+          <td>VISUALIZACION E INTERFACES</td>
+          <td>2300 | Ma08a12 (Con cupo)</td>
+          <td>Semipresencial</td>
+          <td><input type="checkbox" name="materia" checked></td>
+          <td>Se puede promocionar</td>
+        </tr>
+        <tr>
+          <td>2686</td>
+          <td>TALLER WEB I</td>
+          <td>4300 | Vi18a22 (Con cupo)</td>
+          <td>Virtual</td>
+          <td><input type="checkbox" name="materia"></td>
+          <td>Final obligatorio</td>
+        </tr>
+        <tr>
+          <td>2111</td>
+          <td>DISEÑO DE APLICACIONES WEB</td>
+          <td>2900 | Mi18a22 (Con cupo)</td>
+          <td>Semipresencial</td>
+          <td><input type="checkbox" name="materia" checked></td>
+          <td>Se puede promocionar</td>
+        </tr>
+        <tr >
+          <td>2325</td>
+          <td>PROGRAMACION WEB II</td>
+          <td>2900 | Ma18a22 (Sin cupo)</td>
+          <td>Sincrónica Teams</td>
+          <td><input type="checkbox" name="materia" disabled>
+            <span style="color: #e74c3c; font-size: 1.2em; margin-left: 6px;">&#10006;</span>
+          </td><td>Final obligatorio</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <table class="tabla-inscripcion">
+      <thead>
+        <tr><td colspan="6" style=" background-color: #00876c;">Plan B</td></tr>
+      <tr>
+        <th>Código</th>
+        <th>Materia</th>
+        <th>Comisión/Turno/Día</th>
+        <th>Modalidad</th>
+        <th>Agregar</th>
+        <th>Condición</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr>
+        <td>2630</td>
+        <td>VISUALIZACION E INTERFACES</td>
+        <td>2300 | Vi19a23 (Sin cupo)</td>
+        <td>Presencial</td>
+        <td><input type="checkbox" name="materia" disabled>
+          <span style="color: #e74c3c; font-size: 1.2em; margin-left: 6px;">&#10006;</span>
+        </td>
+        <td>Se puede promocionar</td>
+      </tr>
+      <tr >
+        <td>2325</td>
+        <td>PROGRAMACION WEB II</td>
+        <td>2900 | Lun8a12 (Con cupo)</td>
+        <td>Sincrónica Teams</td>
+        <td><input type="checkbox" name="materia" checked></td>
+        <td>Final obligatorio</td>
+      </tr>
+      </tbody>
+    </table>
+  
+    <form id="form-inscripcion" action="ComprobanteInscripcion.html">
+      <table class="tabla-inscripcion">
+        <thead>
+          <tr><td colspan="6" style=" background-color: #00876c;">Todas las materias</td></tr>
         <tr>
           <th>Código</th>
           <th>Materia</th>
@@ -313,16 +458,98 @@
           <td>Se puede promocionar</td>
         </tr>
         <tr>
+          <td>2630</td>
+          <td>VISUALIZACION E INTERFACES</td>
+          <td>2300 | Ma08a12 (Con cupo)</td>
+          <td>Semipresencial</td>
+          <td><input type="checkbox" name="materia" checked></td>
+          <td>Se puede promocionar</td>
+        </tr>
+        <tr>
+          <td>2686</td>
+          <td>TALLER WEB I</td>
+          <td>4300 | Vi18a22 (Con cupo)</td>
+          <td>Virtual</td>
+          <td><input type="checkbox" name="materia"></td>
+          <td>Final obligatorio</td>
+        </tr>
+        <tr>
+          <td>2111</td>
+          <td>DISEÑO DE APLICACIONES WEB</td>
+          <td>2900 | Mi18a22 (Con cupo)</td>
+          <td>Semipresencial</td>
+          <td><input type="checkbox" name="materia" checked></td>
+          <td>Se puede promocionar</td>
+        </tr>
+        <tr>
+          <td>2630</td>
+          <td>VISUALIZACION E INTERFACES</td>
+          <td>2300 | Ma08a12 (Con cupo)</td>
+          <td>Semipresencial</td>
+          <td><input type="checkbox" name="materia" checked></td>
+          <td>Se puede promocionar</td>
+        </tr>
+        <tr>
           <td>2325</td>
           <td>PROGRAMACION WEB II</td>
           <td>2900 | Ma18a22 (Sin cupo)</td>
-          <td>Sincrónica Teams</td>
+          <td>Sincrónica Teams</td><td>
+          <input type="checkbox" name="materia" disabled>
+            <span style="color: #e74c3c; font-size: 1.2em; margin-left: 6px;">&#10006;</span></td>
+          <td>Final obligatorio</td>
+        </tr>
+        <tr>
+          <td>2325</td>
+          <td>PROGRAMACION WEB II</td>
+          <td>2900 | Ma18a22 (Sin cupo)</td>
+          <td>Sincrónica Teams</td><td>
+          <input type="checkbox" name="materia" disabled>
+            <span style="color: #e74c3c; font-size: 1.2em; margin-left: 6px;">&#10006;</span></td>
+          <td>Final obligatorio</td>
+        </tr>
+        <tr>
+          <td>2686</td>
+          <td>TALLER WEB I</td>
+          <td>4300 | Vi18a22 (Con cupo)</td>
+          <td>Virtual</td>
           <td><input type="checkbox" name="materia"></td>
+          <td>Final obligatorio</td>
+        </tr>
+        <tr>
+          <td>2111</td>
+          <td>DISEÑO DE APLICACIONES WEB</td>
+          <td>2900 | Mi18a22 (Con cupo)</td>
+          <td>Semipresencial</td>
+          <td><input type="checkbox" name="materia" checked></td>
+          <td>Se puede promocionar</td>
+        </tr>
+        <tr>
+          <td>2325</td>
+          <td>PROGRAMACION WEB II</td>
+          <td>2900 | Ma18a22 (Sin cupo)</td>
+          <td>Sincrónica Teams</td><td>
+          <input type="checkbox" name="materia" disabled>
+            <span style="color: #e74c3c; font-size: 1.2em; margin-left: 6px;">&#10006;</span></td>
           <td>Final obligatorio</td>
         </tr>
         </tbody>
       </table>
-      <button type="submit" class="btn-procesar" id="btn-inscribir" disabled>Procesar inscripción</button>
+      <div class="insc-disp">¡Atención! Para poder inscribirte, primero <span style="color:  #08be9a;">debes aceptar los términos y condiciones.</span></div>
+      <div class="terminos-container">
+        <div class="terminos-header" onclick="toggleTerminos()">
+          <span class="material-symbols-outlined" id="icon-terminos">expand_more</span>
+          Términos y condiciones de la inscripción
+        </div>
+        <div class="terminos-body" id="body-terminos">
+          Al inscribirte a las materias, declarás que la información proporcionada es verídica y que cumplís con los requisitos académicos y administrativos correspondientes. Recordá que la inscripción es personal e intransferible. La Universidad podrá verificar la veracidad de los datos y tomar las medidas necesarias en caso de inconsistencias. <br><br>
+          Es tu responsabilidad revisar los horarios, comisiones y correlatividades antes de confirmar la inscripción. Ante cualquier duda, consultá con la Secretaría Académica.
+        </div>
+        <div class="terminos-check">
+          <input type="checkbox" id="check-terminos" onchange="habilitarInscripcion()">
+          <label for="check-terminos">He leído y <span style="color: #08be9a;">acepto</span> los términos y condiciones</label>
+        </div>
+      </div>
+      <button type="submit"  class="btn-procesar" id="btn-inscribir" disabled>Procesar inscripción</button>
     </form>
     <hr class="separador">
     <div class="insc-disp">¿No están tus materias?</div>
@@ -363,6 +590,7 @@
     </form>
   </main>
 </div>
+<button id="btn-flotante-ir-aceptar" class="btn-flotante">Ir a aceptar inscripción</button>
 <script>
 function toggleTerminos() {
   const body = document.getElementById('body-terminos');
@@ -372,6 +600,15 @@ function toggleTerminos() {
 }
 function habilitarInscripcion() {
   document.getElementById('btn-inscribir').disabled = !document.getElementById('check-terminos').checked;
+}
+if (document.getElementById('btn-flotante-ir-aceptar')) {
+  document.getElementById('btn-flotante-ir-aceptar').onclick = function() {
+    var el = document.getElementById('check-terminos');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.focus();
+    }
+  };
 }
 </script>
 </body>

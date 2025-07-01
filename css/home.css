@@ -171,13 +171,7 @@ body {
     border-radius: 8px;
     border: 1px solid #e5e7eb;
 }
-.material-symbols-outlined {
-    width: 24px;
-    height: 24px;
-    font-size: 60px;
-    color: #f8fafc; /* Cambialo si querés otro color */
-    
-}
+
 
 .info-title {
     color: #dc2626;
@@ -276,7 +270,7 @@ body {
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 1rem;
+            
             margin: 0;
             padding: 0;
             flex-wrap: wrap;
@@ -290,7 +284,8 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            margin: 5px;
+            padding: 12px 5px 12px 5px;
             color: white;
             text-decoration: none;
             transition: background-color 0.3s;

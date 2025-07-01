@@ -3,83 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscripción a materias</title>
+  <title>Intraconsulta - Historial Académico</title>
   <link rel="stylesheet" href="../css/home.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/materiasEnCurso.css">
   <link rel="icon" type="image/png" href="../images/unlam-logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <style>
-    /* Estilo específico para la tabla de inscripción */
-    .tabla-inscripcion {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2rem;
-    }
-    .tabla-inscripcion th, .tabla-inscripcion td {
-      padding: 1rem;
-      border: 1px solid #444;
-      text-align: left;
-      font-size: 1rem;
-    }
-    .tabla-inscripcion thead {
-      background-color: #333;
-    }
-    .tabla-inscripcion tbody tr.selected {
-      background-color: #00876c;
-      color: #fff;
-    }
-    .tabla-inscripcion input[type="checkbox"] {
-      accent-color: #00876c;
-      width: 18px;
-      height: 18px;
-      cursor: pointer;
-    }
-    .btn-inscribir {
-      background-color: #00876c;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 0.8rem 2rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-      margin-top: 1.5rem;
-      display: block;
-    }
-    .btn-inscribir:hover {
-      background-color: #00695c;
-    }
-    .sidebar .menu li.insc-activo {
-      background-color: #444;
-      color: #fff;
-      font-weight: bold;
-    }
-    .insc-titulo {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #fff;
-    }
-    .insc-sub {
-      font-size: 1.1rem;
-      color: #fff;
-      margin-bottom: 1.5rem;
-    }
-    .insc-disp {
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 1rem;
-    }
-    @media (max-width: 900px) {
-      .tabla-inscripcion th, .tabla-inscripcion td {
-        padding: 0.5rem;
-        font-size: 0.95rem;
-      }
-      .insc-titulo { font-size: 1.3rem; }
-    }
-  </style>
 </head>
 <body>
   <header class="header" style="height: 70px;">
@@ -220,87 +149,100 @@
     </ul>
   </nav>
   <div class="container">
-    <!-- Menú lateral -->
     <aside class="sidebar">
-      <h3>Inscripciones</h3>
+      <h3 style="margin-left: 5px;">Materias</h3>
       <ul class="menu">
-        <a href="InscripcionMaterias.html" style="text-decoration:none"><li class="insc-activo">Inscripción a materias</li></a>
-        <a href="#" style="text-decoration:none"><li>Inscripción a finales</li></a>
-        <a href="#" style="text-decoration:none"><li>Verificación de materias</li></a>
-        <a href="#" style="text-decoration:none"><li>Verificación de finales</li></a>
-        <a href="#" style="text-decoration:none"><li>Oferta de materias</li></a>
-        <a href="#" style="text-decoration:none"><li>Fecha de finales</li></a>
-     
-      
-      
+        <a href="materiasEnCurso.html" style="text-decoration: none;"><li>Materias en curso</li></a>
+        <li>Materias regularizadas</li>
+        <a href="historialAcademico.html" style="text-decoration: none;"><li  class="active">Historial académico</li></a>
       
       </ul>
     </aside>
-
-   
- 
-  <!-- Contenido principal -->
-  <main class="contenido">
-    <div class="insc-titulo">Inscripción a materias</div>
-    <div class="insc-disp">Se encuentra disponible la inscripción a materias</div>
-    <div class="insc-sub">Seleccione la carrera, y comience la inscripción.</div>
-    <div style="margin-bottom: 1.5rem; color: #fff;">Usted puede inscribirse a materias de las siguientes carreras:</div>
-    <form id="form-carreras">
-      <table class="tabla-inscripcion">
+    <main class="contenido">
+      
+      <h2>Historial academico</h2>
+      <div class="filtros-historial">
+        <label for="plan-estudio">Seleccione el plan de estudio</label>
+        <select id="plan-estudio">
+          <option>(298)Plan09-3º TEC. UNIVERSITARIA EN WEB - DTO. INGENIERIA</option>
+        </select>
+        <button class="btn-consultar">Consultar</button>
+      </div>
+      <table class="tabla-materias">
         <thead>
         <tr>
-          <th></th>
           <th>Código</th>
-          <th>Carrera</th>
-          <th>Plan</th>
+          <th>Materia</th>
+          <th>Fecha</th>
+          <th>Nota</th>
+          <th>Acta</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-          <td><input type="checkbox" name="carrera" value="02630" checked></td>
-          <td>02630</td>
-          <td>TEC. UNIVERSITARIA EN WEB</td>
-          <td>2006</td>
+          <td>02620</td>
+          <td>INFORMATICA GENERAL</td>
+          <td>2024-07-13</td>
+          <td>7</td>
+          <td>426149</td>
         </tr>
         <tr>
-          <td><input type="checkbox" name="carrera" value="02629"></td>
-          <td>02629</td>
-          <td>INGENIERIA EN INFORMATICA</td>
-          <td>2007</td>
+          <td>02622</td>
+          <td>INGLES TECNICO I</td>
+          <td>2024-07-13</td>
+          <td>7</td>
+          <td>426150</td>
+        </tr>
+        <tr>
+          <td>02621</td>
+          <td>MATEMATICA GENERAL</td>
+          <td>2024-07-13</td>
+          <td>7</td>
+          <td>426151</td>
+        </tr>
+        <tr>
+          <td>02628</td>
+          <td>PROGRAMACION BASICA I</td>
+          <td>2024-07-13</td>
+          <td>7</td>
+          <td>426131</td>
+        </tr>
+        <tr>
+          <td>02627</td>
+          <td>INGLES TECNICO II</td>
+          <td>2024-11-30</td>
+          <td>7</td>
+          <td>426147</td>
+        </tr>
+        <tr>
+          <td>02618</td>
+          <td>INTRODUCCION AL DISEÑO GRAFICO EN LA WEB</td>
+          <td>2024-11-30</td>
+          <td>8</td>
+          <td>434483</td>
+        </tr>
+        <tr>
+          <td>02624</td>
+          <td>PROGRAMACION WEB I</td>
+          <td>2024-11-30</td>
+          <td>9</td>
+          <td>434484</td>
+        </tr>
+        <tr>
+          <td>02625</td>
+          <td>BASE DE DATOS I</td>
+          <td>2024-11-30</td>
+          <td>7</td>
+          <td>434481</td>
         </tr>
         </tbody>
       </table>
-      <a href="InscripcionMateriasDefinitiva.html" class="btn-inscribir" style="display:inline-block; text-align:center; text-decoration:none;">Comenzar inscripción</a>
-      <a href="PreInscripcionMaterias.html" class="btn-inscribir" style="display:inline-block; text-align:center; text-decoration:none;">Pre-inscripción</a>
-    </form>
-  </main>
-</div>
-<script>
-// Solo permite seleccionar una carrera a la vez (checkbox que actúa como radio)
-document.querySelectorAll('input[type="checkbox"][name="carrera"]').forEach(function(checkbox) {
-  checkbox.addEventListener('change', function() {
-    if (this.checked) {
-      document.querySelectorAll('input[type="checkbox"][name="carrera"]').forEach(function(other) {
-        if (other !== checkbox) other.checked = false;
-      });
-    }
-  });
-});
-// Resalta la fila seleccionada
-document.querySelectorAll('input[type="checkbox"][name="carrera"]').forEach(function(checkbox) {
-  checkbox.addEventListener('change', function() {
-    document.querySelectorAll('.tabla-inscripcion tbody tr').forEach(function(row, idx) {
-      row.classList.remove('selected');
-      if (checkbox.checked && checkbox === row.querySelector('input')) {
-        row.classList.add('selected');
-      }
-    });
-  });
-  // Inicializa la fila seleccionada
-  if (checkbox.checked) {
-    checkbox.closest('tr').classList.add('selected');
-  }
-});
-</script>
+      <div class="historial-footer">
+        <span><h3>Cantidad de materias promocionadas: 8</h3></span>
+        <button class="btn-finales">Exportar pdf</button>
+        <button class="btn-finales">Finales desaprobados</button>
+      </div>
+    </main>
+  </div>
 </body>
 </html> 
