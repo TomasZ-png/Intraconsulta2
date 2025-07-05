@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-inscripción a materias</title>
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/materiasEnCurso.css">
+  <link rel="icon" type="image/png" href="../images/unlam-logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    .tabla-preinscripcion {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    .tabla-preinscripcion th, .tabla-preinscripcion td {
+      padding: 1rem;
+      border: 1px solid #444;
+      text-align: left;
+      font-size: 1rem;
+    }
+    .tabla-preinscripcion thead {
+      background-color: #333;
+    }
+    .tabla-preinscripcion tbody tr.selected {
+      background-color: #00876c;
+      color: #fff;
+    }
+    .tabla-preinscripcion input[type="checkbox"] {
+      accent-color: #00876c;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+    .btn-procesar, .btn-buscar {
+      background-color: #00876c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 1.5rem;
+      display: block;
+    }
+    .btn-procesar:hover, .btn-buscar:hover {
+      background-color: #00695c;
+    }
+    .tabla-carga-manual {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+    }
+    .tabla-carga-manual th, .tabla-carga-manual td {
+      padding: 0.7rem;
+      border: 1px solid #444;
+      text-align: center;
+      font-size: 1rem;
+      background: #222;
+      color: #fff;
+    }
+    .tabla-carga-manual input {
+      width: 90%;
+      padding: 0.4rem;
+      border-radius: 4px;
+      border: 1px solid #444;
+      background: #181818;
+      color: #fff;
+      text-align: center;
+    }
+    .preinsc-titulo {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .preinsc-desc {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .preinsc-disp {
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .preinsc-sub {
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .separador {
+      border: none;
+      border-top: 2px solid #444;
+      margin: 2.5rem 0 1.5rem 0;
+    }
+    @media (max-width: 900px) {
+      .tabla-preinscripcion th, .tabla-preinscripcion td, .tabla-carga-manual th, .tabla-carga-manual td {
+        padding: 0.5rem;
+        font-size: 0.95rem;
+      }
+      .preinsc-titulo { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" style="height: 70px;">
+    <div class="logo">
+      <a href="home.html" class="logo-link">
+        <img id="logo-intraconsulta" src="../images/unlam-logo.png" alt="logo">
+        <span id="titulo">Intraconsulta</span>
+      </a>
+    </div>
+    <div class="user-container">
+        <div class="user-dropdown">
+            <div class="user-info">
+                <div class="user-name">RODRIGUEZ, PEDRO ROMAN</div>
+                <div class="estate-user">Tu estado es<span class="negrita-verde">ACTIVO</span><span class="material-symbols-outlined dropdown-arrow""> expand_more</span></div>
+                
+            </div>
+            
+            <div class="user-dropdown-content">
+                <div class="dropdown-header">
+                    <div class="user-name-full">RODRIGUEZ, PEDRO ROMAN</div>
+                    <div class="user-status">Estado: <span class="negrita-verde">ACTIVO</span></div>
+                </div>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">person</span>
+                    Mi Perfil
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">settings</span>
+                    Configuración
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">email</span>
+                    Office 365
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">lock</span>
+                    Cambiar Contraseña
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">help</span>
+                    Ayuda y Soporte
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">description</span>
+                    Términos y Condiciones
+                </a>
+                
+                <a href="/html/login.html" class="dropdown-item logout">
+                    <span class="material-symbols-outlined">logout</span>
+                    Cerrar Sesión
+                </a>
+            </div>
+        </div>
+    </div>
+  </header>
+  <nav class="navbar">
+    <ul class="nav-menu">
+      
+      <li style="margin-left: 5px;" class="nav-item dropdown">
+        <a href="#"  class="nav-link">Materias <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="materiasEnCurso.html">Materias en Curso</a>
+          <a href="#">Materias regularizadas</a>
+          <a href="historialAcademico.html">Historial académico</a>
+          <a href="#">Plan de Estudios</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Inscripciones <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="InscripcionMaterias.html">Inscripción a materias</a>
+          <a href="#">Inscripción a Finales</a>
+          <a href="#">Verificacion de materias</a>
+          <a href="#">Verificacion de finales</a>
+          <a href="#">Oferta de materias</a>
+          <a href="#">Fecha de finales</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Solicitudes <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Titulo/Analitico de Pre/Pos/Grado</a>
+          <a href="#">Analítico Parcial</a>
+          <a href="#">Cambio/Simultaneidad de Carreras</a>
+          <a href="#">Baja Inscripcion Anual</a>
+          <a href="#">Legalizacion de programas</a>
+          <a href="#">Libreta Universitaria</a>
+          <a href="#">Homologaciones Interdepartamentales</a>
+          <a href="#">Excepcionalidad</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Certificados <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Certificado de Alumno Regular</a>
+          <a href="#">Certificado Materias Aprobadas</a>
+          <a href="#">Competencias básicas</a>
+          <a href="#">Descargar Certificados</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Constancias <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Constancia de Parcial</a>
+          <a href="#">Constancia de Final</a>
+          <a href="#">Constancia de Título</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Trámites online <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Activaciones</a>
+          <a href="#">Boleto estudiantil</a>
+          <a href="#">Cambio de plan</a>
+          <a href="#">Equivalencias</a>
+          <a href="#">Extension de correlativas</a>
+          <a href="#">Reclamo de notas</a>
+          <a href="#">Reincorporación</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Otras operaciones <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Resoluciones</a>
+          <a href="#">Ficha Médica</a>
+          <a href="#">Contacto</a>
+          <a href="#">BIDI</a>
+          <a href="#">Validacion Email Tramites</a>
+          <a href="#">Términos y Condiciones</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <h3>Inscripciones</h3>
+      <ul class="menu">
+        <li class="insc-activo">Pre-inscripción a materias</li>
+        <li>Inscripción a materias</li>
+        <li>Inscripción a finales</li>
+        <li>Verificación de materias</li>
+        <li>Verificación de finales</li>
+        <li>Oferta de materias</li>
+        <li>Fecha de finales</li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido">
+      <div class="preinsc-titulo">Pre-inscripción a materias</div>
+      <div class="preinsc-desc">Elige las materias que deseas preseleccionar para tu próxima inscripción.</div>
+      <div class="preinsc-disp">¿Para qué sirve la pre-inscripción?</div>
+      <div class="preinsc-sub">Aquí podés preseleccionar las materias a las que te gustaría inscribirte en el próximo período. Cuando se habilite la inscripción definitiva, tus materias ya estarán tildadas y solo tendrás que confirmar, haciendo tu proceso mucho más rápido y sencillo.</div>
+      <div style="margin-bottom: 1.5rem; color: #fff;">Materias que podés preseleccionar según tu plan:</div>
+      <form id="form-preinscripcion">
+        <table class="tabla-preinscripcion">
+          <thead>
+          <tr>
+            <th>Código</th>
+            <th>Materia</th>
+            <th>Comisión/Turno/Día</th>
+            <th>Plan A</th>
+            <th>Plan B</th>
+            <th>Modalidad</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>2630</td>
+            <td>VISUALIZACION E INTERFACES</td>
+            <td>2300 | Ma08a12 (Con cupo)</td>
+            <td><input type="checkbox" name="materia"></td>
+            <td><input type="checkbox" name="materia"></td>
+            <td>Semipresencial</td>
+          </tr>
+          <tr>
+            <td>2686</td>
+            <td>TALLER WEB I</td>
+            <td>4300 | Vi18a22 (Con cupo)</td>
+            <td><input type="checkbox" name="materia"></td>
+            <td><input type="checkbox" name="materia"></td>
+            <td>Virtual</td>
+          </tr>
+          <tr>
+            <td>2111</td>
+            <td>DISEÑO DE APLICACIONES WEB</td>
+            <td>2900 | Mi18a22 (Con cupo)</td>
+            <td><input type="checkbox" name="materia" checked></td>
+            <td><input type="checkbox" name="materia"></td>
+            <td>Semipresencial</td>
+          </tr>
+          <tr>
+            <td>2325</td>
+            <td>PROGRAMACION WEB II</td>
+            <td>2900 | Ma18a22 (Sin cupo)</td>
+            <td><input type="checkbox" name="materia"></td>
+            <td><input type="checkbox" name="materia"></td>
+            <td>Sincrónica Teams</td>
+          </tr>
+          </tbody>
+        </table>
+        <a href="InscripcionMaterias.html" style="text-decoration: none;"><button type="button" class="btn-procesar">Procesar pre-inscripción</button></a>
+      </form>
+
+      <hr class="separador">
+      <div class="preinsc-disp">¿No están tus materias?</div>
+      <div class="preinsc-sub">Cargá materias manualmente:</div>
+      <form id="form-carga-manual">
+        <table class="tabla-carga-manual">
+          <thead>
+          <tr>
+            <th>Fila</th>
+            <th>Código de materia</th>
+            <th>Código de comisión</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td><input type="text" name="codmat1" maxlength="6"></td>
+            <td><input type="text" name="codcom1" maxlength="6"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><input type="text" name="codmat2" maxlength="6"></td>
+            <td><input type="text" name="codcom2" maxlength="6"></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><input type="text" name="codmat3" maxlength="6"></td>
+            <td><input type="text" name="codcom3" maxlength="6"></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><input type="text" name="codmat4" maxlength="6"></td>
+            <td><input type="text" name="codcom4" maxlength="6"></td>
+          </tr>
+          </tbody>
+        </table>
+        <button type="button" class="btn-buscar">Buscar materia</button>
+      </form>
+    </main>
+  </div>
+</body>
+</html> 

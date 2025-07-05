@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materias inscriptas</title>
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="icon" type="image/png" href="../images/unlam-logo.png">
+  <link rel="stylesheet" href="../css/materiasEnCurso.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    .tabla-inscriptas {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    .tabla-inscriptas th, .tabla-inscriptas td {
+      padding: 1rem;
+      border: 1px solid #444;
+      text-align: left;
+      font-size: 1rem;
+    }
+    .tabla-inscriptas thead {
+      background-color: #333;
+    }
+    .btn-verde {
+      background-color: #00876c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-bottom: 1rem;
+      display: block;
+      width: 100%;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-verde:hover {
+      background-color: #00695c;
+    }
+    .btn-gris {
+      background-color: #888;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1rem;
+      display: block;
+      width: 100%;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .insc-titulo {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .insc-desc {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .insc-disp {
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 900px) {
+      .tabla-inscriptas th, .tabla-inscriptas td {
+        padding: 0.5rem;
+        font-size: 0.95rem;
+      }
+      .insc-titulo { font-size: 1.3rem; }
+      .btn-verde, .btn-gris { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" style="height: 70px;">
+    <div class="logo">
+      <a href="home.html" class="logo-link">
+        <img id="logo-intraconsulta" src="../images/unlam-logo.png" alt="logo">
+        <span id="titulo">Intraconsulta</span>
+      </a>
+    </div>
+    <div class="user-container">
+        <div class="user-dropdown">
+            <div class="user-info">
+                <div class="user-name">RODRIGUEZ, PEDRO ROMAN</div>
+                <div class="estate-user">Tu estado es<span class="negrita-verde">ACTIVO</span><span class="material-symbols-outlined dropdown-arrow""> expand_more</span></div>
+                
+            </div>
+            
+            <div class="user-dropdown-content">
+                <div class="dropdown-header">
+                    <div class="user-name-full">RODRIGUEZ, PEDRO ROMAN</div>
+                    <div class="user-status">Estado: <span class="negrita-verde">ACTIVO</span></div>
+                </div>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">person</span>
+                    Mi Perfil
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">settings</span>
+                    Configuración
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">email</span>
+                    Office 365
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">lock</span>
+                    Cambiar Contraseña
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">help</span>
+                    Ayuda y Soporte
+                </a>
+                
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined">description</span>
+                    Términos y Condiciones
+                </a>
+                
+                <a href="/html/login.html" class="dropdown-item logout">
+                    <span class="material-symbols-outlined">logout</span>
+                    Cerrar Sesión
+                </a>
+            </div>
+        </div>
+    </div>
+  </header>
+  <nav class="navbar">
+    <ul class="nav-menu">
+      
+      <li style="margin-left: 5px;" class="nav-item dropdown">
+        <a href="#"  class="nav-link">Materias <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="materiasEnCurso.html">Materias en Curso</a>
+          <a href="#">Materias regularizadas</a>
+          <a href="historialAcademico.html">Historial académico</a>
+          <a href="#">Plan de Estudios</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Inscripciones <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="InscripcionMaterias.html">Inscripción a materias</a>
+          <a href="#">Inscripción a Finales</a>
+          <a href="#">Verificacion de materias</a>
+          <a href="#">Verificacion de finales</a>
+          <a href="#">Oferta de materias</a>
+          <a href="#">Fecha de finales</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Solicitudes <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Titulo/Analitico de Pre/Pos/Grado</a>
+          <a href="#">Analítico Parcial</a>
+          <a href="#">Cambio/Simultaneidad de Carreras</a>
+          <a href="#">Baja Inscripcion Anual</a>
+          <a href="#">Legalizacion de programas</a>
+          <a href="#">Libreta Universitaria</a>
+          <a href="#">Homologaciones Interdepartamentales</a>
+          <a href="#">Excepcionalidad</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Certificados <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Certificado de Alumno Regular</a>
+          <a href="#">Certificado Materias Aprobadas</a>
+          <a href="#">Competencias básicas</a>
+          <a href="#">Descargar Certificados</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Constancias <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Constancia de Parcial</a>
+          <a href="#">Constancia de Final</a>
+          <a href="#">Constancia de Título</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Trámites online <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Activaciones</a>
+          <a href="#">Boleto estudiantil</a>
+          <a href="#">Cambio de plan</a>
+          <a href="#">Equivalencias</a>
+          <a href="#">Extension de correlativas</a>
+          <a href="#">Reclamo de notas</a>
+          <a href="#">Reincorporación</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Otras operaciones <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="dropdown-content">
+          <a href="#">Resoluciones</a>
+          <a href="#">Ficha Médica</a>
+          <a href="#">Contacto</a>
+          <a href="#">BIDI</a>
+          <a href="#">Validacion Email Tramites</a>
+          <a href="#">Términos y Condiciones</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+<div class="container">
+  <!-- Menú lateral -->
+  <aside class="sidebar">
+    <h3>Inscripciones</h3>
+    <ul class="menu">
+      <li class="insc-activo">Inscripción a materias</li>
+      <li>Inscripción a finales</li>
+      <li>Verificación de materias</li>
+      <li>Verificación de finales</li>
+      <li>Oferta de materias</li>
+      <li>Fecha de finales</li>
+    </ul>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="contenido">
+    <div class="insc-titulo">Inscripción a cursadas</div>
+    <div class="insc-disp" style="margin-bottom:0.5rem;">Materias inscriptas</div>
+    <div class="insc-desc">Se visualizarán las materias a las que te inscribiste</div>
+    <div style="margin-bottom: 1.5rem; color: #fff;">Materias en la que estas inscripto:</div>
+    <table class="tabla-inscriptas">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Materia</th>
+          <th>Comisión</th>
+          <th>Estado</th>
+          <th>Espera</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2630</td>
+          <td>VISUALIZACION E INTERFACES</td>
+          <td>2300</td>
+          <td>Habilitado</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>2111</td>
+          <td>DISEÑO DE APLICACIONES WEB</td>
+          <td>2900</td>
+          <td>Habilitado</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn-verde">Descargar constancia de Inscripción</button>
+    <button class="btn-verde">Verificar Inscripción</button>
+    <button class="btn-gris">Volver a inscripción</button>
+  </main>
+</div>
+</body>
+</html> 

@@ -32,6 +32,69 @@ body {
     padding: 0;
     margin: 0;
 }
+/* a refactorizar */
+.filtros-historial {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .filtros-historial label {
+    font-size: 15px;
+    color: #fff;
+  }
+  .filtros-historial select {
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 15px;
+  }
+
+  .btn-consultar {
+    background: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-consultar:hover {
+    background: #00796b;
+  }
+
+  .historial-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+  .historial-footer span {
+    color: #fff;
+    font-size: 15px;
+  }
+  .btn-finales {
+    background-color: #00876c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1.5rem;
+    display: block;
+  }
+  .btn-finales:hover {
+    background: #00796b;
+  }
+  
+  /* hasta aca */
 
 .menu li {
     padding: 0.8rem 1rem;
