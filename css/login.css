@@ -11,37 +11,47 @@ body {
     color: #e4e4e4;
 }
 
+#logo-image{
+    margin-right: 10px;
+}
+
+#title-nav{
+    font-size: 28px;
+}
 
 /* Hero section */
 .hero {
     display: flex;
-    justify-content: right;
+    justify-content: space-evenly;
     align-items: center;             /* Alinea verticalmente el contenido */
-    /*gap: 30rem;                       !* Espacio generoso entre bienvenida y formulario *!*/
-    padding: 4rem 2rem;
-    /*background: linear-gradient(135deg, #36a37e, #3ec99b);*/
+    background: linear-gradient(135deg, #089a73, #63cb60);
     color: white;
-    flex-wrap: wrap;
     width: 100%;
-    background-image: url("../images/Fachada-Entrada-Interior-Dia02.jpg");
+    height: 100vh;               /* Ocupa toda la altura de la ventana */
     /* Permite que se ajuste en pantallas más estrechas */
 }
 .hero-left {
-    background: rgba(12, 144, 114, 0.3);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    padding: 2.5rem;
     border-radius: 12px;
     width: 100%;
-    max-width: 360px;
+    max-width: 540px;
     color: white;
+    
 }
+
+.hero-left h1 {
+    font-size: 80px;
+}
+
+.hero-left p {
+    font-size: 24px;
+    font-weight: 330;
+}
+
 .hero-right {
-    background: rgba(0, 77, 64, 0.3);
+    background: rgba(0, 77, 64, 0.13);
     backdrop-filter: blur(3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     padding: 2.5rem;
-    border-radius: 12px;
+    border-radius: 8px;
     width: 100%;
     max-width: 450px;
     color: white;
@@ -78,26 +88,42 @@ body {
     color: #999;
 }
 
-.hero-right .checkbox {
+#password-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox {
     display: flex;
     align-items: center;
     margin: 1rem 0;
-    font-size: 0.9rem;
+    font-size: 0.9rem;;
+}
+
+.checkbox input {
+    margin-right: 0.5rem;
+}
+
+.checkbox label{
+    margin-top: 6px;
 }
 
 .hero-right .link {
     display: block;
     font-size: 0.85rem;
     color: #d0f1ff;
-    margin-bottom: 1rem;
+    
     text-align: right;
 }
-
+.hero-right .link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
 .hero-right button {
     width: 100%;
     padding: 0.8rem;
-    background-color: #004d40;
-    color: white;
+    background-color: #ffffff;
+    color: #089a73;
     border: none;
     border-radius: 6px;
     font-weight: bold;
@@ -106,14 +132,31 @@ body {
     transition: background-color 0.3s ease;
 }
 
+
+
 .hero-right button:hover {
     background-color: #00695c;
+    color: #ffffff;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ffffff;
+    margin: 20px 0;
 }
 
 .hero-right .registro {
-    margin: 1.5rem 0 0.5rem;
     font-size: 0.9rem;
-    text-align: center;
+    text-align: left;
+}
+
+.registro {
+    margin-bottom: 15px;
+   
+}
+
+.registro p {
+    text-align: left;
 }
 
 .boton-secundario {
@@ -137,46 +180,92 @@ body {
 /* Cards section */
 .cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 2rem;
-    background: #303030;
+    gap: 2rem;
+    background: #272727;
 }
-#card-sied{
+.card-sied{
+    height:230px;
+    width: 390px;
+    background-color: #04c994;
+    
+}
+
+.texto-card{
+    padding: 20px;
+}
+
+.contenedor-imagen{
     display: flex;
-    /*justify-content: center;*/
-    text-align: center;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    padding-right: 1rem ;
-    padding-left: 1rem ;
-    background-color: #00876c;
-    border-radius: 6px;
+    justify-content: center;
+    align-items: center; /* Altura fija para las tarjetas */
 }
+
 .card {
-    width: 30%;
+    width: 350px;
+    height: 350px;
     background: #1e1e1e;
     border-radius: 8px;
-    padding: 1rem;
+    
     text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+    background: #2a2a2a;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .card img {
     width: 100%;
-    border-radius: 6px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card h3 {
-    margin-top: 1rem;
+   
+    text-align: left;
 }
 
 .card p {
     font-size: 0.9rem;
+    text-align: left;
+    margin-top: 10px;
 }
 
 /* FAQ */
 .faq {
-    background: #1e1e1e;
+    background: #272727;
     padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.faq-container{
+    max-width: 800px;
+    width: 100%;
+    background: #303030;
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
+    
+}
+
+.pfc{
+    background-color: #111;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.pfc:hover {
+    background: #383838;
 }
 
 .faq h2 {
@@ -188,11 +277,7 @@ body {
     padding: 0;
 }
 
-.faq li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #ccc;
-    font-size: 0.95rem;
-}
+
 
 /* Footer */
 .footer {
@@ -227,4 +312,87 @@ body {
         flex: 1 1 100%;
         max-width: none;
     }
+}
+
+
+ .pentagon {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.08); /* Transparencia sutil */
+      clip-path: polygon(
+        50% 0%,
+        100% 38%,
+        82% 100%,
+        18% 100%,
+        0% 38%
+      );
+      animation: floatUp 20s linear infinite, spin 10s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-150px) scale(1);
+        opacity: 0;
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+
+    .pentagon-wrapper {
+  position: absolute;
+  bottom: -100px;
+  animation: floatUp 20s linear infinite;
+}
+
+.pentagon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.08);
+  clip-path: polygon(
+    50% 0%,
+    100% 38%,
+    82% 100%,
+    18% 100%,
+    0% 38%
+  );
+  animation: spin 10s linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

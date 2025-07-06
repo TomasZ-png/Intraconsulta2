@@ -8,79 +8,122 @@
   <link rel="icon" type="image/png" href="../images/unlam-logo.png">
   <link rel="stylesheet" href="../css/header.css">
 </head>
+
 <body>
 <!-- Header -->
 <div class="container">
   <header class="header">
     <div class="logo">
       <a href="login.html" class="logo-link">
-        <img src="../images/unlam-logo.png" alt="logo">
-        <span style="font-family: 'Times New Roman', Times, serif;">Intraconsulta</span>
+        <img id="logo-image" src="../images/unlam-logo.png" alt="logo">
+        <span id="title-nav" style="font-family: 'Times New Roman', Times, serif;">Intraconsulta</span>
       </a>
-    </div>
-    <div class="user-info">
-      <a href="#" class="user-link">Calendario academico</a>
-      <a href="#" class="user-link">Mapa de aulas</a>
-      <span>PORTAL 365</span>
     </div>
   </header>
 
+  <main>
+<div id="login-content">
 <!-- Bienvenida y Login -->
 <section class="hero">
-<!--  <div class="hero-left">-->
-<!--    <h1>Intraconsulta</h1>-->
-<!--    <p>Sistema de Autogestión de Alumnos de la UNLaM.<br></p>-->
-<!--&lt;!&ndash;    </p>  Aquí encontrarás las Operaciones de Autogestión que necesitás para completar las actividades básicas de tu currícula académica.</p>&ndash;&gt;-->
-<!--  </div>-->
+  <div class="hero-left">
+    <h1>Intraconsulta</h1>
+    <p>Sistema de Autogestión de Alumnos de la UNLaM.<br>
+    Aquí encontrarás las Operaciones de Autogestión que necesitás para completar las actividades básicas de tu currícula académica.</p>
+  </div>
+
   <div class="hero-right">
     <h2>¡Buenos días!</h2>
     <form action="home.html">
       <label>Documento:</label>
       <input type="text" placeholder="Ingresá tu documento">
-      <label>Contraseña:</label>
+      <div id="password-container">
+        <label>Contraseña:</label>
+        <a href="#" class="link">Olvidé mi contraseña</a>
+      </div>
       <input type="password" placeholder="Ingresá tu contraseña">
-      <a href="#" class="link">Olvidé mi contraseña</a>
       <div class="checkbox">
         <input type="checkbox" id="recordar">
         <label for="recordar">Mantener mi sesión activa</label>
       </div>
       <button type="submit">Ingresar</button>
-<!--      <p class="registro">¿Es la primera vez que venís?</p>-->
-<!--      <a href="#" class="boton-secundario">Registrarse</a>-->
+      <hr class="divider">
+      <p class="registro">¿Es la primera vez que venís?</p>
+      <a href="#" class="boton-secundario">Registrarse</a>
     </form>
   </div>
 </section>
+</div>
 
+<!-- Pentágonos flotantes -->
+<div class="pentagon-wrapper" style="left: 10%; animation-delay: 0s;">
+  <div class="pentagon"></div>
+</div>
+<div class="pentagon-wrapper" style="left: 25%; animation-delay: 3s;">
+  <div class="pentagon"></div>
+</div>
+<div class="pentagon-wrapper" style="left: 40%; animation-delay: 6s;">
+  <div class="pentagon"></div>
+</div>
+<div class="pentagon-wrapper" style="left: 60%; animation-delay: 1.5s;">
+  <div class="pentagon"></div>
+</div>
+<div class="pentagon-wrapper" style="left: 75%; animation-delay: 4s;">
+  <div class="pentagon"></div>
+</div>
+<div class="pentagon-wrapper" style="left: 90%; animation-delay: 2s;">
+  <div class="pentagon"></div>
+</div>
+
+</main>
 <!-- Accesos rápidos -->
 <section class="cards">
   <div class="card">
-    <img src="../images/card-universidad.jpg" alt="Calendario">
+    <div class="contenedor-imagen">
+      <div class="card-sied"><img src="../images/card-universidad.jpg" alt="Calendario"></div>
+    </div>
+    <div class="texto-card">
     <h3>Calendario académico</h3>
     <p>Fechas importantes para cursadas, inscripciones, finales y más.</p>
+    </div>
   </div>
   <div class="card">
-    <div id="card-sied" style="height: 270px"><img src="../images/logo-sied-unlam-40.png" alt="SIED" ></div>
+    <div class="contenedor-imagen">
+      <div class="card-sied"><img style="object-fit: contain; padding: 10px; " src="../images/logo-sied-unlam-40.png" alt="SIED"></div>
+    </div>
+    <div class="texto-card">
     <h3>SIED UNLaM</h3>
     <p>Información sobre el sistema de educación a distancia.</p>
-  </div>
+    </div>
+    </div>
+  
   <div class="card">
-    <img src="../images/card-biblioteca.jpg" alt="Biblioteca">
+     <div class="contenedor-imagen">
+      <div class="card-sied"><img src="../images/card-biblioteca.jpg" alt="BIBLIOTECA"></div>
+    </div>
+    <div class="texto-card">
     <h3>Biblioteca Leopoldo Marechal</h3>
     <p>Accedé al catálogo bibliográfico y conocé los servicios disponibles.</p>
+    </div>
   </div>
 </section>
 
+
+
 <!-- FAQ -->
 <section class="faq">
-  <h2>Preguntas frecuentes</h2>
-  <ul>
-    <li>▶ ¿Qué es la Educación a distancia?</li>
-    <li>▶ ¿Qué es la Educación a distancia?</li>
-    <li>▶ ¿Qué es la Educación a distancia?</li>
-    <li>▶ ¿Qué es la Educación a distancia?</li>
-    <li>▶ ¿Qué es la Educación a distancia?</li>
-    <li>▶ ¿Qué es la Educación a distancia?</li>
-  </ul>
+  <div class="faq-container">
+
+    <h2>Preguntas frecuentes</h2>
+    <ul>
+      <li class="pfc">▶ ¿Qué es la Educación a distancia?</li>
+      <li class="pfc">▶ ¿Qué es la Unidad de Educación a Distancia?</li>
+      <li class="pfc">▶ ¿Qué es MIeL?</li>
+      <li class="pfc">▶ ¿Qué es Intraconsulta?</li>
+      <li class="pfc">▶ ¿Cómo accedo a Intraconsulta?</li>
+      <li class="pfc">▶ ¿Que herramientas encuentro en Intraconsulta?</li>
+      <li class="pfc">▶ ¿Puedo utilizar Intraconsulta desde un celular?</li>
+    </ul>
+  </div>
 </section>
 
 <!-- Footer -->
