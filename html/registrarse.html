@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Intraconsulta - Inicio</title>
+  <title>Intraconsulta - Registrarse</title>
   <link rel="stylesheet" href="../css/login.css">
   <link rel="icon" type="image/png" href="../images/unlam-logo.png">
   <link rel="stylesheet" href="../css/header.css">
+  
 </head>
 
 <body>
@@ -26,53 +27,53 @@
 <!-- Bienvenida y Login -->
 <section class="hero">
   <div class="hero-left">
-    <h1>Intraconsulta</h1>
-    <p>Sistema de Autogestión de Alumnos de la UNLaM.<br>
-    Aquí encontrarás las Operaciones de Autogestión que necesitás para completar las actividades básicas de tu currícula académica.</p>
-  </div>
+    <h1>Registrarse</h1>
+    <p>Registrate para poder acceder a tus operaciones de autogestion  <br>
+</div>
 
   <div class="hero-right">
-    <h2>¡Buenos días!</h2>
-    <form action="home.html">
-      <label>Documento:</label>
-      <input class="input-label" type="text" placeholder="Ingresá tu documento">
-      <div id="password-container">
-        <label>Contraseña:</label>
-        <a href="#" class="link">Olvidé mi contraseña</a>
-      </div>
-      <input class="input-label" type="password" placeholder="Ingresá tu contraseña">
-      <div class="checkbox">
-        <input type="checkbox" id="recordar">
-        <label for="recordar">Mantener mi sesión activa</label>
-      </div>
-      <button type="submit">Ingresar</button>
-      <hr class="divider">
-      <p class="registro">¿Es la primera vez que venís?</p>
-      <a href="#" class="boton-secundario">Registrarse</a>
+    <h2>Registrarse</h2>
+    <form action="login.html">
+        <div class="input-container">
+            <label>Documento:</label>
+            <menu id="menu-container">
+                <select placeholder="Seleccione su documento" class="input-label">
+                    <option id="placeholder-menu" value="" disabled selected>Seleccione su documento</option>
+                    <option value="dni">DNI</option>
+                    <option value="le">LE</option>
+                    <option value="lc">LC</option>
+                    <option value="pasaporte">Pasaporte</option>
+                </select>
+            </menu>
+        </div>
+      <div class="input-container">
+        <label>Número de documento:</label>    
+        <input class="input-label" type="text" placeholder="Ingresá tu número de documento">
+    </div>
+
+    <div class="fake-recaptcha">
+        <div id="fake-recaptcha-checkbox">
+            <input type="checkbox" id="checkCaptcha">
+            <label for="checkCaptcha">
+                No soy un robot</label>
+            </div>
+            <div class="fake-recaptcha-logo-container">
+                <span class="fake-recaptcha-logo">
+                    🤖
+                </span>
+            </label>
+            <div class="recaptcha-footer">reCAPTCHA de Google</div>
+        </div>
+
+</div>
+  <br/>
+    <button href="/html/login.html" type="submit">Registrarse</button>
+      
     </form>
   </div>
 </section>
 </div>
 
-<!-- Pentágonos flotantes -->
-<div class="pentagon-wrapper" style="left: 10%; animation-delay: 0s;">
-  <div class="pentagon"></div>
-</div>
-<div class="pentagon-wrapper" style="left: 25%; animation-delay: 3s;">
-  <div class="pentagon"></div>
-</div>
-<div class="pentagon-wrapper" style="left: 40%; animation-delay: 6s;">
-  <div class="pentagon"></div>
-</div>
-<div class="pentagon-wrapper" style="left: 60%; animation-delay: 1.5s;">
-  <div class="pentagon"></div>
-</div>
-<div class="pentagon-wrapper" style="left: 75%; animation-delay: 4s;">
-  <div class="pentagon"></div>
-</div>
-<div class="pentagon-wrapper" style="left: 90%; animation-delay: 2s;">
-  <div class="pentagon"></div>
-</div>
 </main>
     
 </body>
