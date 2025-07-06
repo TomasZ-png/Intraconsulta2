@@ -77,7 +77,7 @@
 </main>
 <!-- Accesos rápidos -->
 <section class="cards">
-  <div class="card">
+  <a href="https://www.unlam.edu.ar/index.php?seccion=8&idArticulo=449" class="card" target="_blank">
     <div class="contenedor-imagen">
       <div class="card-sied"><img src="../images/card-universidad.jpg" alt="Calendario"></div>
     </div>
@@ -85,8 +85,8 @@
     <h3>Calendario académico</h3>
     <p>Fechas importantes para cursadas, inscripciones, finales y más.</p>
     </div>
-  </div>
-  <div class="card">
+  </a>
+  <div id="sied-unlam-card" class="card">
     <div class="contenedor-imagen">
       <div class="card-sied"><img style="object-fit: contain; padding: 10px; " src="../images/logo-sied-unlam-40.png" alt="SIED"></div>
     </div>
@@ -95,8 +95,25 @@
     <p>Información sobre el sistema de educación a distancia.</p>
     </div>
     </div>
+
+    <div id="modalSIED" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" id="cerrarModal">&times;</span>
+    <h2>UNLaM SIED</h2>
+    <p>El Sistema Institucional de Educación a Distancia (SIED) es el conjunto de acciones, normas, procesos, equipamiento, recursos humanos y didácticos que permiten el desarrollo de propuestas a distancia.</p>
+    <ul>
+      <li>📄 Resolución UNLaM 293-2011: Creación de la Unidad de Educación a Distancia</li>
+      <li>📄 Resolución UNLaM 139-2019: Reglamento del SIED UNLaM</li>
+      <li>📄 Resolución UNLaM 563-2023: Actualización</li>
+      <li>📄 Resolución CONEAU 304-2021: Validación del SIED</li>
+      <li>📄 Resolución Ministerio de Educación 157-2021: Aprobación</li>
+    </ul>
+  </div>
+</div>
+
+<script src="../javaScript/sied.js"></script>
   
-  <div class="card">
+  <a href="https://biblioteca.unlam.edu.ar" class="card" target="_blank">
      <div class="contenedor-imagen">
       <div class="card-sied"><img src="../images/card-biblioteca.jpg" alt="BIBLIOTECA"></div>
     </div>
@@ -104,35 +121,70 @@
     <h3>Biblioteca Leopoldo Marechal</h3>
     <p>Accedé al catálogo bibliográfico y conocé los servicios disponibles.</p>
     </div>
-  </div>
+  </a>
 </section>
 
 
 
 <!-- FAQ -->
+
 <section class="faq">
   <div class="faq-container">
-
     <h2>Preguntas frecuentes</h2>
-    <ul>
-      <li class="pfc">▶ ¿Qué es la Educación a distancia?</li>
-      <li class="pfc">▶ ¿Qué es la Unidad de Educación a Distancia?</li>
-      <li class="pfc">▶ ¿Qué es MIeL?</li>
-      <li class="pfc">▶ ¿Qué es Intraconsulta?</li>
-      <li class="pfc">▶ ¿Cómo accedo a Intraconsulta?</li>
-      <li class="pfc">▶ ¿Que herramientas encuentro en Intraconsulta?</li>
-      <li class="pfc">▶ ¿Puedo utilizar Intraconsulta desde un celular?</li>
-    </ul>
+
+    <details>
+      <summary>¿Qué es la Educación a distancia?</summary>
+      <p>La <b>Educación a Distancia (EaD)</b> es una modalidad pedagógica y didáctica en la cual la relación docente-estudiante se encuentra <b>separada en el tiempo y/o en el espacio</b>, durante todo o gran parte del ciclo lectivo. La misma se hace efectiva mediante el uso de recursos tecnológicos, informáticos y de comunicación diseñados especialmente con la finalidad que los estudiantes alcancen los objetivos de la propuesta educativa.</p>
+    </details>
+
+    <details>
+      <summary>¿Qué es la Unidad de Educación a Distancia?</summary>
+      <p>La Unidad de Educación a Distancia (UEaD) es una área multidisciplinaria dependiente de la Secretaría Académica de la UNLaM. Su responsabilidad es desarrollar y gestionar las herramientas tecnológicas que componen la plataforma institucional de EaD; proveer asesoramiento, capacitación tutorial y orientación relacionada con el diseño de currículas y contenidos dentro de la modalidad; además de difundir las actividades vinculadas a la EaD.</p>
+    </details>
+
+    <details>
+      <summary>¿Qué es MIeL?</summary>
+      <p>MIeL (Materias Interactivas en Línea) es una plataforma web de enseñanza y aprendizaje en línea, desarrollada íntegramente por personal docente la UNLaM. La misma fue puesta en funcionamiento durante el ciclo lectivo 2001, como resultado de un proyecto de investigación.
+
+A través de ella se imparten asignaturas de grado, posgrado, seminarios, cursos abiertos a la comunidad y de perfeccionamiento docente, en modalidad distancia o como complemento a la modalidad presencial.</p>
+    </details>
+
+    <details>
+      <summary>¿Qué es Intraconsulta?</summary>
+      <p>Es una herramienta de autogestion curricular de los alumnos de la UNLaM. Aqui podrás consultar informacion relevante acerca de: 
+        <br><b>Materias</b>
+        <br><b>Finales</b>
+        <br><b>Inscripciones</b></p>
+        <b>Cursadas</b>
+        <br><b>Operaciones institucionales</b>
+    </details>
+
+    <details>
+      <summary>¿Cómo accedo a Intraconsulta?</summary>
+      <p>Ingresando con tu documento y contraseña, podrás ingresar a la plataforma de Intraconsulta</p>
+    </details>
+
+    <details>
+      <summary>¿Qué hago si no estoy registrado?</summary>
+      <p>Si ya hiciste la <b>preinscripcion virtual</b>, presentaste la documentacion necesaria en <b>direccion de alumnos</b> y estas dado de alta en el sistema, ingresá a <b>Registrarse</b>, ahi completá los datos necesarios y ya estarás registrado en Intraconsulta!</p>
+    </details>
+
+
+    <details>
+      <summary>¿Puedo utilizar Intraconsulta desde un celular?</summary>
+      <p>Sí, la plataforma es responsive y funciona correctamente en dispositivos móviles.</p>
+    </details>
+
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-  <div class="footer-left">
+  <d class="footer-left">
     <p><strong>UNLaM</strong></p>
     <p>Av. Pres. Perón 1900 (B1754FGC)<br>San Justo, Buenos Aires, Argentina</p>
     <p>(54-11) 4480-8900<br>info@unlam.edu.ar</p>
-  </div>
+  </d>
   <div class="footer-right">
     <h4>ENLACES INSTITUCIONALES</h4>
     <ul>

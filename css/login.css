@@ -61,7 +61,7 @@ body {
 .hero-right h2 {
     margin-top: 0;
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
@@ -76,16 +76,25 @@ body {
 .hero-right input[type="password"] {
     width: 100%;
     padding: 0.75rem;
-    margin-bottom: 1rem;
     border: none;
     border-radius: 6px;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #26420f21;
+    color: #ffffff;
     font-size: 1rem;
 }
 
+
+.hero-right input[type="text"]{
+    margin-bottom: 1rem;
+}
+
+.hero-right input:focus{
+    outline: none;
+    border: 1.5px solid #ffffff;
+}
+
 .hero-right input::placeholder {
-    color: #999;
+    color: #ffffffb9;
 }
 
 #password-container{
@@ -102,6 +111,16 @@ body {
 
 .checkbox input {
     margin-right: 0.5rem;
+    background-color: #b44242;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    accent-color: #089a73; /* Cambia el color del checkbox */
+    border: none;
+
 }
 
 .checkbox label{
@@ -116,7 +135,6 @@ body {
     display: block;
     font-size: 0.85rem;
     color: #d0f1ff;
-    
     text-align: right;
 }
 .hero-right .link:hover {
@@ -156,7 +174,6 @@ body {
 
 .registro {
     margin-bottom: 15px;
-   
 }
 
 .registro p {
@@ -211,9 +228,11 @@ body {
     height: 350px;
     background: #1e1e1e;
     border-radius: 8px;
-    
+    cursor: pointer;
     text-align: center;
     transition: transform 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+    color: white;
 }
 
 .card:hover {
@@ -229,8 +248,8 @@ body {
 }
 
 .card h3 {
-   
     text-align: left;
+    
 }
 
 .card p {
@@ -238,6 +257,71 @@ body {
     text-align: left;
     margin-top: 10px;
 }
+
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 88%;
+  height: 42%;
+  max-width: 650px;
+  position: relative;
+  color: #000;
+}
+
+.modal-contenido ul{
+    list-style: none;
+    padding: 0;
+}
+
+.modal-contenido ul li {
+    background-color: #dbdbdb;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-contenido ul li:hover {
+    background-color: #b3b3b3;
+    cursor: pointer;
+    
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #000;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: #ff0000;
+}
+
+.boton-sied {
+  background-color: #00695c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 
 /* FAQ */
 .faq {
@@ -260,17 +344,6 @@ body {
     
 }
 
-.pfc{
-    background-color: #111;
-    padding: 10px;
-    margin: 6px;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-}
-
-.pfc:hover {
-    background: #383838;
-}
 
 .faq h2 {
     margin-bottom: 1rem;
@@ -279,6 +352,33 @@ body {
 .faq ul {
     list-style: none;
     padding: 0;
+}
+
+
+details {
+  background: #1a1a1a;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+details:hover {
+  background: #2a2a2a;
+}
+
+summary {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+details[open] {
+  background: #333333;
+}
+
+details p {
+  margin-top: 10px;
 }
 
 
@@ -323,7 +423,7 @@ body {
       position: absolute;
       width: 80px;
       height: 80px;
-      background: rgba(255, 255, 255, 0.08); /* Transparencia sutil */
+      background: rgba(255, 255, 255, 0.212); /* Transparencia sutil */
       clip-path: polygon(
         50% 0%,
         100% 38%,
@@ -367,7 +467,7 @@ body {
 .pentagon {
   width: 80px;
   height: 80px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.171);
   clip-path: polygon(
     50% 0%,
     100% 38%,
