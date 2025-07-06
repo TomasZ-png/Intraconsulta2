@@ -108,6 +108,10 @@ body {
     margin-top: 6px;
 }
 
+.input-label{
+    background-color: #089a73;
+}
+
 .hero-right .link {
     display: block;
     font-size: 0.85rem;
