@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intraconsulta - Dashboard</title>
     <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/materias.css" />
     <link rel="icon" type="image/png" href="../images/unlam-logo.png" />
-    <link rel="stylesheet" href="../css/materiasEnCurso.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <title>Intraconsulta - Materias regularizadas</title>
   </head>
   <body>
     <div id="navbar"></div>
@@ -21,32 +21,41 @@
           document.getElementById("navbar").innerHTML = data;
         });
     </script>
+
     <div class="container">
-      <!-- sidebar + main ... -->
+      <!-- Menú lateral -->
       <aside class="sidebar">
         <h3 style="margin-left: 5px">Materias</h3>
         <ul class="menu">
           <a href="materiasEnCurso.html" style="text-decoration: none"
-            ><li class="active">Materias en curso</li></a
+            ><li>Materias en curso</li></a
           >
           <a href="materiasRegularizadas.html" style="text-decoration: none"
-            ><li>Materias regularizadas</li></a
+            ><li class="active">Materias regularizadas</li></a
           >
           <a href="historialAcademico.html" style="text-decoration: none"
             ><li>Historial académico</li></a
           >
         </ul>
       </aside>
+
       <main class="contenido">
-        <h2>Materias que estoy cursando</h2>
+        <h2>Materias pendientes de Final</h2>
+        <div class="filtros-historial">
+          <label for="plan-estudio">Seleccione el plan de estudio</label>
+          <select id="plan-estudio">
+            <option>
+              (298)Plan09-3º TEC. UNIVERSITARIA EN WEB - DTO. INGENIERIA
+            </option>
+          </select>
+          <button class="btn-consultar">Consultar</button>
+        </div>
         <table class="tabla-materias">
           <thead>
             <tr>
               <th>Código</th>
               <th>Materia</th>
               <th>Comisión</th>
-              <th>Horario</th>
-              <th>Aula</th>
               <th>Modalidad</th>
             </tr>
           </thead>
@@ -55,24 +64,13 @@
               <td>02630</td>
               <td>VISUALIZACION E INTERFACES</td>
               <td>01-2300</td>
-              <td>Martes 08:00 a 12:00</td>
-              <td>Aula 109</td>
               <td>Semipresencial</td>
             </tr>
-            <tr>
-              <td>02629</td>
-              <td>DISEÑO DE APLICACIONES WEB</td>
-              <td>01-3966</td>
-              <td>Miércoles 19:00 a 23:00, Sábado 14:00 a 18:00</td>
-              <td>Virtual, Virtual</td>
-              <td>Sincrónica Teams</td>
-            </tr>
+
             <tr>
               <td>02631</td>
               <td>TALLER WEB I</td>
               <td>02-4900</td>
-              <td>Jueves 19:00 a 23:00</td>
-              <td>Aula 253</td>
               <td>Semipresencial</td>
             </tr>
           </tbody>
