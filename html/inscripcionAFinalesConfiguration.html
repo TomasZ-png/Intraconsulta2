@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inscripción definitiva a materias</title>
+    <title>Inscripción definitiva a finales</title>
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="icon" type="image/png" href="../images/unlam-logo.png" />
@@ -14,7 +14,7 @@
     />
     <style>
       .tabla-inscripcion {
-        width: 100%;
+        width: 80%;
         border-collapse: collapse;
         margin-bottom: 2rem;
       }
@@ -197,10 +197,10 @@
         <h3>Inscripciones</h3>
         <ul class="menu">
           <a href="InscripcionMaterias.html" style="text-decoration: none"
-            ><li  class="active">Inscripción a materias</li></a
+            ><li >Inscripción a materias</li></a
           >
           <a href="inscripcionAFinales.html" style="text-decoration: none"
-            ><li >Inscripción a finales</li></a
+            ><li  class="active">Inscripción a finales</li></a
           >
           <a href="verificacionDeMaterias.html" style="text-decoration: none"
             ><li >Verificación de materias</li></a
@@ -219,109 +219,12 @@
 
       <!-- Contenido principal -->
       <main class="contenido">
-        <div class="insc-titulo">Inscripción a materias</div>
+        <div class="insc-titulo">Inscripción a finales</div>
         <div class="insc-desc">
-          Elige las materias a inscribirte y confirma tu inscripción definitiva.
+          Elige los finales a inscribirte y confirma tu inscripción definitiva.
         </div>
 
-        <div>
-          <h3>Pre seleccion de materias</h3>
-          <table class="tabla-inscripcion">
-            <thead>
-              <tr>
-                <td colspan="6" style="background-color: #00876c">Plan A</td>
-              </tr>
-              <tr>
-                <th>Código</th>
-                <th>Materia</th>
-                <th>Comisión/Turno/Día</th>
-                <th>Modalidad</th>
-                <th>Agregar</th>
-                <th>Condición</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2630</td>
-                <td>VISUALIZACION E INTERFACES</td>
-                <td>2300 | Ma08a12 (Con cupo)</td>
-                <td>Semipresencial</td>
-                <td><input type="checkbox" name="materia" checked /></td>
-                <td>Se puede promocionar</td>
-              </tr>
-              <tr>
-                <td>2686</td>
-                <td>TALLER WEB I</td>
-                <td>4300 | Vi18a22 (Con cupo)</td>
-                <td>Virtual</td>
-                <td><input type="checkbox" name="materia" /></td>
-                <td>Final obligatorio</td>
-              </tr>
-              <tr>
-                <td>2111</td>
-                <td>DISEÑO DE APLICACIONES WEB</td>
-                <td>2900 | Mi18a22 (Con cupo)</td>
-                <td>Semipresencial</td>
-                <td><input type="checkbox" name="materia" checked /></td>
-                <td>Se puede promocionar</td>
-              </tr>
-              <tr>
-                <td>2325</td>
-                <td>PROGRAMACION WEB II</td>
-                <td>2900 | Ma18a22 (Sin cupo)</td>
-                <td>Sincrónica Teams</td>
-                <td>
-                  <input type="checkbox" name="materia" disabled />
-                  <span
-                    style="color: #e74c3c; font-size: 1.2em; margin-left: 6px"
-                    >&#10006;</span
-                  >
-                </td>
-                <td>Final obligatorio</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <table class="tabla-inscripcion">
-          <thead>
-            <tr>
-              <td colspan="6" style="background-color: #00876c">Plan B</td>
-            </tr>
-            <tr>
-              <th>Código</th>
-              <th>Materia</th>
-              <th>Comisión/Turno/Día</th>
-              <th>Modalidad</th>
-              <th>Agregar</th>
-              <th>Condición</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2630</td>
-              <td>VISUALIZACION E INTERFACES</td>
-              <td>2300 | Vi19a23 (Sin cupo)</td>
-              <td>Presencial</td>
-              <td>
-                <input type="checkbox" name="materia" disabled />
-                <span style="color: #e74c3c; font-size: 1.2em; margin-left: 6px"
-                  >&#10006;</span
-                >
-              </td>
-              <td>Se puede promocionar</td>
-            </tr>
-            <tr>
-              <td>2325</td>
-              <td>PROGRAMACION WEB II</td>
-              <td>2900 | Lun8a12 (Con cupo)</td>
-              <td>Sincrónica Teams</td>
-              <td><input type="checkbox" name="materia" checked /></td>
-              <td>Final obligatorio</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <form id="form-inscripcion" action="ComprobanteInscripcion.html">
+        <form id="form-inscripcion" action="inscripcionFinalProcesado.html">
           <table class="tabla-inscripcion">
             <thead>
               <tr>
@@ -332,74 +235,130 @@
               <tr>
                 <th>Código</th>
                 <th>Materia</th>
-                <th>Comisión/Turno/Día</th>
-                <th>Modalidad</th>
-                <th>Agregar</th>
-                <th>Condición</th>
+                <th>Comisión</th>
+                <th>Llamado</th>
+                <th>Seleccionar</th>
+                <th>Aula</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>2630</td>
                 <td>VISUALIZACION E INTERFACES</td>
-                <td>2300 | Ma08a12 (Con cupo)</td>
-                <td>Semipresencial</td>
+                <td>2300</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td><input type="checkbox" name="materia" checked /></td>
-                <td>Se puede promocionar</td>
+                <td>230</td>
               </tr>
               <tr>
                 <td>2686</td>
                 <td>TALLER WEB I</td>
-                <td>4300 | Vi18a22 (Con cupo)</td>
-                <td>Virtual</td>
+                <td>4300</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td><input type="checkbox" name="materia" /></td>
-                <td>Final obligatorio</td>
+                <td>130</td>
               </tr>
               <tr>
                 <td>2111</td>
                 <td>DISEÑO DE APLICACIONES WEB</td>
-                <td>2900 | Mi18a22 (Con cupo)</td>
-                <td>Semipresencial</td>
+                <td>2900</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td><input type="checkbox" name="materia" checked /></td>
-                <td>Se puede promocionar</td>
+                <td>230</td>
               </tr>
               <tr>
                 <td>2630</td>
                 <td>VISUALIZACION E INTERFACES</td>
-                <td>2300 | Ma08a12 (Con cupo)</td>
-                <td>Semipresencial</td>
+                <td>2300</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td><input type="checkbox" name="materia" checked /></td>
-                <td>Se puede promocionar</td>
+                <td>230</td>
               </tr>
               <tr>
                 <td>2686</td>
                 <td>TALLER WEB I</td>
-                <td>4300 | Vi18a22 (Con cupo)</td>
-                <td>Virtual</td>
+                <td>4300</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td><input type="checkbox" name="materia" /></td>
-                <td>Final obligatorio</td>
+                <td>230</td>
               </tr>
               <tr>
                 <td>2111</td>
                 <td>DISEÑO DE APLICACIONES WEB</td>
-                <td>2900 | Mi18a22 (Con cupo)</td>
-                <td>Semipresencial</td>
+                <td>2900</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td><input type="checkbox" name="materia" checked /></td>
-                <td>Se puede promocionar</td>
+                <td>230</td>
               </tr>
               <tr>
                 <td>2630</td>
                 <td>VISUALIZACION E INTERFACES</td>
-                <td>2300 | Ma08a12 (Con cupo)</td>
-                <td>Semipresencial</td>
+                <td>2300</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td><input type="checkbox" name="materia" checked /></td>
-                <td>Se puede promocionar</td>
+                <td>230</td>
               </tr>
               <tr>
                 <td>2325</td>
                 <td>PROGRAMACION WEB II</td>
-                <td>2900 | Ma18a22 (Sin cupo)</td>
-                <td>Sincrónica Teams</td>
+                <td>2900</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td>
                   <input type="checkbox" name="materia" disabled />
                   <span
@@ -407,13 +366,20 @@
                     >&#10006;</span
                   >
                 </td>
-                <td>Final obligatorio</td>
+                <td>230</td>
               </tr>
               <tr>
                 <td>2325</td>
                 <td>PROGRAMACION WEB II</td>
-                <td>2900 | Ma18a22 (Sin cupo)</td>
-                <td>Sincrónica Teams</td>
+                <td>2900</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td>
                   <input type="checkbox" name="materia" disabled />
                   <span
@@ -421,29 +387,50 @@
                     >&#10006;</span
                   >
                 </td>
-                <td>Final obligatorio</td>
+                <td>230</td>
               </tr>
               <tr>
                 <td>2686</td>
                 <td>TALLER WEB I</td>
-                <td>4300 | Vi18a22 (Con cupo)</td>
-                <td>Virtual</td>
+                <td>4300</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td><input type="checkbox" name="materia" /></td>
-                <td>Final obligatorio</td>
+                <td>230</td>
               </tr>
               <tr>
                 <td>2111</td>
                 <td>DISEÑO DE APLICACIONES WEB</td>
-                <td>2900 | Mi18a22 (Con cupo)</td>
-                <td>Semipresencial</td>
+                <td>2900</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td><input type="checkbox" name="materia" checked /></td>
-                <td>Se puede promocionar</td>
+                <td>230</td>
               </tr>
               <tr>
                 <td>2325</td>
                 <td>PROGRAMACION WEB II</td>
-                <td>2900 | Ma18a22 (Sin cupo)</td>
-                <td>Sincrónica Teams</td>
+                <td>2900</td>
+                <td>
+                  <div class="filtros-historial">
+                    <select id="plan-estudio">
+                      <option>12-07(Sa08-12)</option>
+                      <option>16-07(Mie19-23)</option>
+                    </select>
+                  </div>
+                </td>
                 <td>
                   <input type="checkbox" name="materia" disabled />
                   <span
@@ -451,7 +438,7 @@
                     >&#10006;</span
                   >
                 </td>
-                <td>Final obligatorio</td>
+                <td>230</td>
               </tr>
             </tbody>
           </table>

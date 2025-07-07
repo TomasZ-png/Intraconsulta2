@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificacion de finales</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/materiasEnCurso.css" />
+    <link rel="icon" type="image/png" href="../images/unlam-logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <style>
+      .mensaje-exito {
+        background: #e0f7ef;
+        color: #00876c;
+        border-radius: 8px;
+        padding: 1.2rem 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        text-align: center;
+        border: 1px solid #b2dfdb;
+      }
+      .btn-exportar {
+        background: #009688;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 2rem auto 0 auto;
+        display: block;
+        transition: background 0.2s;
+      }
+      .btn-exportar:hover {
+        background: #00796b;
+      }
+
+       .tabla-inscripcion {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+      }
+      .tabla-inscripcion th,
+      .tabla-inscripcion td {
+        padding: 1rem;
+        border: 1px solid #444;
+        text-align: left;
+        font-size: 1rem;
+      }
+      .tabla-inscripcion thead {
+        background-color: #333;
+      }
+      .tabla-inscripcion input[type="checkbox"] {
+        accent-color: #00876c;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <script>
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+    <div class="container">
+      <!-- Menú lateral -->
+      <aside class="sidebar">
+        <h3>Inscripciones</h3>
+        <ul class="menu">
+          <a href="InscripcionMaterias.html" style="text-decoration: none"
+            ><li class="insc-activo">Inscripción a materias</li></a
+          >
+          <a href="inscripcionAFinales.html" style="text-decoration: none"
+            ><li >Inscripción a finales</li></a
+          >
+          <a href="verificacionDeMaterias.html" style="text-decoration: none"
+            ><li >Verificación de materias</li></a
+          >
+          <a href="VerificacionDeFinales.html" style="text-decoration: none"
+            ><li >Verificación de finales</li></a
+          >
+          <a href="OfertaDeMaterias.html" style="text-decoration: none"
+            ><li>Oferta de materias</li></a
+          >
+          <a href="fechaFinales.html" style="text-decoration: none"
+            ><li class="active">Fecha de finales</li></a
+          >
+        </ul>
+      </aside>
+
+      <main class="contenido" style="width: 100%; margin: 0 auto">
+        <div class="insc-titulo"><h1>Fecha de finales</h1></div>
+        <div class="insc-desc">
+          Esta son las fechas disponibles a finales
+          <br>
+        </div>
+         <br>
+        <p>Seleccione el plan de estudio</p>
+        
+        <div class="filtros-historial">
+          
+          <select id="plan-estudio">
+            <option>
+              (298)Plan09-3º TEC. UNIVERSITARIA EN WEB - DTO. INGENIERIA
+            </option>
+          </select>
+          <button class="btn-consultar">Consultar</button>
+        </div>
+        
+        <table class="tabla-inscripcion">
+            <thead>
+      <tr>
+        <th>Código</th>
+        <th>Materia</th>
+        <th>Llamado</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Modalidad</th>
+        <th>Tipo Mesa</th>
+        <th>Observación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2819</td>
+        <td>PROGRAMACION BASICA I</td>
+        <td>1</td>
+        <td>2025-07-24</td>
+        <td>18:00</td>
+        <td>Presencial</td>
+        <td>Solo Regulares</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>2819</td>
+        <td>PROGRAMACION BASICA I</td>
+        <td>2</td>
+        <td>2025-07-30</td>
+        <td>18:00</td>
+        <td>Presencial</td>
+        <td>Libres y Regulares</td>
+        <td>B</td>
+      </tr>
+      <tr><td>2820</td><td>INFORMATICA GENERAL</td><td>1</td><td>2025-07-25</td><td>18:00</td><td>Presencial</td><td>Solo Regulares</td><td>A</td></tr>
+    <tr><td>2820</td><td>INFORMATICA GENERAL</td><td>2</td><td>2025-07-30</td><td>18:00</td><td>Presencial</td><td>Libres y Regulares</td><td>B</td></tr>
+    <tr><td>2821</td><td>MATEMATICA GENERAL</td><td>1</td><td>2025-07-26</td><td>09:00</td><td>Presencial</td><td>Solo Regulares</td><td>A</td></tr>
+    <tr><td>2821</td><td>MATEMATICA GENERAL</td><td>2</td><td>2025-07-31</td><td>09:00</td><td>Presencial</td><td>Libres y Regulares</td><td>B</td></tr>
+    <tr><td>2822</td><td>INGLES TECNICO I</td><td>1</td><td>2025-07-31</td><td>18:00</td><td>Presencial</td><td>Solo Regulares</td><td>A</td></tr>
+    <tr><td>2823</td><td>PROGRAMACION BASICA II</td><td>1</td><td>2025-07-24</td><td>18:00</td><td>Presencial</td><td>Solo Regulares</td><td>A</td></tr>
+    <tr><td>2823</td><td>PROGRAMACION BASICA II</td><td>2</td><td>2025-07-30</td><td>18:00</td><td>Presencial</td><td>Libres y Regulares</td><td>B</td></tr>
+    <tr><td>2824</td><td>PROGRAMACION WEB I</td><td>1</td><td>2025-07-28</td><td>19:00</td><td>Presencial</td><td>Solo Regulares</td><td>A</td></tr>
+    <tr><td>2824</td><td>PROGRAMACION WEB I</td><td>2</td><td>2025-08-01</td><td>19:00</td><td>Presencial</td><td>Libres y Regulares</td><td>B</td></tr>
+    <tr><td>2825</td><td>BASES DE DATOS I</td><td>1</td><td>2025-07-24</td><td>18:00</td><td>Presencial</td><td>Solo Regulares</td><td>A</td></tr>
+    <tr><td>2825</td><td>BASES DE DATOS I</td><td>2</td><td>2025-08-02</td><td>08:00</td><td>Presencial</td><td>Libres y Regulares</td><td>B</td></tr>
+    <tr><td>2826</td><td>INTRODUCCION AL DISEÑO GRAFICO EN LA WEB</td><td>1</td><td>2025-07-28</td><td>18:00</td><td>Presencial</td><td>Solo Regulares</td><td>A</td></tr>
+    <tr><td>2826</td><td>INTRODUCCION AL DISEÑO GRAFICO EN LA WEB</td><td>2</td><td>2025-08-01</td><td>18:00</td><td>Presencial</td><td>Libres y Regulares</td><td>B</td></tr>
+    <tr><td>2823</td><td>PROGRAMACION BASICA II</td><td>2</td><td>2025-07-30</td><td>18:00</td><td>Presencial</td><td>Libres y Regulares</td><td>B</td></tr>
+      <!-- Agregá más filas igual -->
+    </tbody>
+          </table>
+        
+      </main>
+    </div>
+  </body>
+</html>

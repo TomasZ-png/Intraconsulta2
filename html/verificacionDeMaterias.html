@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comprobante de inscripción</title>
+    <title>Verificacion de materias</title>
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/materiasEnCurso.css" />
@@ -57,13 +57,13 @@
         <h3>Inscripciones</h3>
         <ul class="menu">
           <a href="InscripcionMaterias.html" style="text-decoration: none"
-            ><li  class="active">Inscripción a materias</li></a
+            ><li>Inscripción a materias</li></a
           >
           <a href="inscripcionAFinales.html" style="text-decoration: none"
             ><li >Inscripción a finales</li></a
           >
           <a href="verificacionDeMaterias.html" style="text-decoration: none"
-            ><li >Verificación de materias</li></a
+            ><li   class="active">Verificación de materias</li></a
           >
           <a href="VerificacionDeFinales.html" style="text-decoration: none"
             ><li >Verificación de finales</li></a
@@ -78,15 +78,19 @@
       </aside>
 
       <main class="contenido" style="width: 100%; margin: 0 auto">
-        <div class="mensaje-exito">Te anotaste en estas materias con éxito</div>
+        <div class="insc-titulo"><h1>Verificacion de materias</h1></div>
+        <div class="insc-desc">
+          Estos son los materias a las que te inscribiste
+          <br>
+        </div>
         <table class="tabla-materias">
           <thead>
             <tr>
               <th>Código</th>
               <th>Materia</th>
               <th>Comisión</th>
-              <th>Horario</th>
-              <th>Modalidad</th>
+              <th>Llamado</th>
+              <th>Aula</th>
             </tr>
           </thead>
           <tbody>
@@ -95,34 +99,32 @@
               <td>VISUALIZACION E INTERFACES</td>
               <td>2300</td>
               <td>Ma08a12</td>
-              <td>Semipresencial</td>
+              <td>230</td>
             </tr>
             <tr>
               <td>02629</td>
               <td>DISEÑO DE APLICACIONES WEB</td>
               <td>3966</td>
               <td>Mi18a22</td>
-              <td>Sincrónica Teams</td>
+              <td>230</td>
             </tr>
             <tr>
               <td>02631</td>
               <td>TALLER WEB I</td>
               <td>4300</td>
               <td>Vi18a22</td>
-              <td>Semipresencial</td>
+              <td>230</td>
             </tr>
             <tr>
               <td>02628</td>
               <td>PROGRAMACION WEB II</td>
               <td>2900</td>
               <td>Lun8a12</td>
-              <td>Virtual</td>
+              <td>230</td>
             </tr>
           </tbody>
         </table>
-        <button class="btn-exportar">
-          Exportar comprobante de inscripción
-        </button>
+        
       </main>
     </div>
   </body>
